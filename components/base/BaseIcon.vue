@@ -5,7 +5,7 @@ const props = defineProps<{
 </script>
 
 <template>
-  <NuxtIcon :name="props.name" class="icon" />
+  <NuxtIcon :name="props.name" class="icon" width="300" />
 </template>
 
 <style lang="postcss" scoped>
