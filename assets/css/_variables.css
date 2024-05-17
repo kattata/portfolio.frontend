@@ -20,17 +20,17 @@
   --color-skeleton-dark: var(--color-primary-10);
 
   /* Typography */
-  --font-family-base-primary: "Saira";
-  --font-family-base-secondary: "Rubik";
-  --font-family-display-primary: "Stencil";
-  --font-family-display-secondary: "Rye";
+  --font-family-base-primary: 'Saira';
+  --font-family-base-secondary: 'Rubik';
+  --font-family-display-primary: 'Stencil';
+  --font-family-display-secondary: 'Rye';
 
   --line-height-base: 1.2;
 
-  --font-size-extra-small: 12px;
-  --font-size-small: 14px;
-  --font-size-base: 16px;
-  --font-size-large: 18px;
+  --font-size-xs: 12px;
+  --font-size-s: 14px;
+  --font-size-m: 16px;
+  --font-size-l: 18px;
 
   --h1-font-size: 40px;
   --h2-font-size: 24px;

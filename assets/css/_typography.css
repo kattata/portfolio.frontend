@@ -21,14 +21,14 @@ h3,
 
 p,
 .p {
-  font-size: var(--font-size-base);
+  font-size: var(--font-size-m);
   margin-bottom: 8px;
 }
 
 .text-small {
-  font-size: var(--font-size-small);
+  font-size: var(--font-size-s);
 }
 
 .text-extra-small {
-  font-size: var(--font-size-extra-small);
+  font-size: var(--font-size-xs);
 }
