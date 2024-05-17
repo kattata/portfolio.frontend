@@ -2,12 +2,14 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
 
-  css: ["~/assets/css/main.css"],
+  css: ['~/assets/css/main.css'],
 
   postcss: {
     plugins: {
-      "postcss-nested": {},
-      "postcss-preset-env": {},
+      'postcss-nested': {},
+      'postcss-preset-env': {},
     },
   },
+
+  modules: ['nuxt-icons'],
 });
