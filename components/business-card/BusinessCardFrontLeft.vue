@@ -37,6 +37,10 @@
       font-size: var(--font-size-xs);
       text-transform: uppercase;
     }
+
+    &--bottom {
+      margin-top: 24px;
+    }
   }
 }
 </style>

@@ -21,7 +21,7 @@
     height: 100%;
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 300px 1fr;
   }
 
   @media (min-width: 900px) {

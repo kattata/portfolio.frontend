@@ -9,5 +9,10 @@
 <style lang="postcss" scoped>
 .business-card {
   margin-top: 60px;
+  width: 100%;
+
+  @media (min-width: 900px) {
+    width: unset;
+  }
 }
 </style>

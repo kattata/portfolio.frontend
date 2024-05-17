@@ -12,14 +12,27 @@ const props = withDefaults(
 </script>
 
 <template>
-  <div class="diamond">
-    {{ props.text }}
+  <div class="diamond-wrapper">
+    <div class="diamond"></div>
+    <div class="diamond-text">{{ props.text }}</div>
   </div>
 </template>
 
 <style lang="postcss" scoped>
-.diamond {
+.diamond-wrapper {
   position: relative;
+}
+
+.diamond-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--color-secondary-100);
+  font-size: var(--font-size-xs);
+}
+
+.diamond {
   height: v-bind('props.size');
   width: v-bind('props.size');
   line-height: v-bind('props.size');
