@@ -1,7 +1,7 @@
 :root {
   /* Colors */
   --color-primary-100: #4e382f;
-  --color-primary-10: #d8c394;
+  --color-primary-10: #c6ae78;
 
   --color-secondary-100: #e4cb8a;
 
@@ -24,6 +24,7 @@
   --font-family-base-secondary: 'Rubik';
   --font-family-display-primary: 'Stencil';
   --font-family-display-secondary: 'Rye';
+  --font-family-handwriting-primary: 'Luxurious';
 
   --line-height-base: 1.2;
 

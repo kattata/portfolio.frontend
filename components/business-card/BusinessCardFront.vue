@@ -34,6 +34,7 @@
     right: 24px;
     top: 0;
     opacity: 0.5;
+    z-index: -1;
   }
 
   @media (min-width: 900px) {

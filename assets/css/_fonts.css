@@ -2,26 +2,33 @@
   font-weight: 400;
   font-family: Saira;
   font-style: semibold;
-  src: url("../fonts/SairaCondensed-SemiBold.ttf");
+  src: url('../fonts/SairaCondensed-SemiBold.ttf');
 }
 
 @font-face {
   font-weight: 400;
   font-family: Stencil;
   font-style: normal;
-  src: url("../fonts/StardosStencil-Regular.ttf");
+  src: url('../fonts/StardosStencil-Regular.ttf');
 }
 
 @font-face {
   font-weight: 400;
   font-family: Rubik;
   font-style: normal;
-  src: url("../fonts/Rubik-Regular.ttf");
+  src: url('../fonts/Rubik-Regular.ttf');
 }
 
 @font-face {
   font-weight: 400;
   font-family: Rye;
   font-style: normal;
-  src: url("../fonts/Rye-Regular.ttf");
+  src: url('../fonts/Rye-Regular.ttf');
+}
+
+@font-face {
+  font-weight: 400;
+  font-family: Luxurious;
+  font-style: normal;
+  src: url('../fonts/LuxuriousScript-Regular.ttf');
 }

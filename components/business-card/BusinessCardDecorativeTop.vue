@@ -18,8 +18,8 @@
         fill="transparent"
       />
       <text>
-        <textPath startOffset="410px" xlink:href="#curve">
-          Get in touch!
+        <textPath startOffset="396px" xlink:href="#curve">
+          Frontend Developer
         </textPath>
       </text>
     </svg>
@@ -43,8 +43,8 @@
   }
 
   textPath {
-    font-size: 26px;
-    font-family: var(--font-family-display-primary);
+    font-size: 16px;
+    font-family: var(--font-family-display-secondary);
     text-transform: uppercase;
     fill: var(--color-secondary-100);
   }
