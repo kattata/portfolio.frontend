@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  devtools: { enabled: true },
+  devtools: { enabled: false },
 
   css: ['~/assets/css/main.css'],
 
@@ -11,5 +11,9 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ['nuxt-icons'],
+  modules: ['nuxt-icons', '@nuxt/image'],
+
+  image: {
+    dir: 'assets/images',
+  },
 });

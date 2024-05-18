@@ -138,10 +138,7 @@
     font-family: var(--font-family-base-secondary);
     font-size: var(--font-size-s);
     text-align: right;
-    background-color: var(--color-secondary-100);
     padding-right: 8px;
-    box-shadow: 0 0 15px 20px var(--color-secondary-100);
-    border-radius: 24px;
   }
 
   &__phone {
@@ -150,25 +147,7 @@
     font-size: 32px;
     letter-spacing: 4px;
     text-align: right;
-    background-color: var(--color-secondary-100);
-    /* padding: 8px; */
-    box-shadow: 0 0 15px 20px var(--color-secondary-100);
-    border-radius: 24px;
-  }
-}
-
-.divider {
-  background-color: var(--color-primary-10);
-
-  &--vertical {
-    margin: auto;
-    width: 1px;
-    height: 100%;
-  }
-
-  &--horizontal {
-    width: 100%;
-    height: 1px;
+    padding-right: 4px;
   }
 }
 </style>

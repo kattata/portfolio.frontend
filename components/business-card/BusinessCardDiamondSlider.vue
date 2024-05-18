@@ -7,7 +7,6 @@ function onInit(swiper: any) {
   swiper.detail[0].autoplay.start();
   swiper.detail[0].autoplay.delay = 0;
   swiper.detail[0].autoplay.waitForTransition = false;
-  console.log(swiper.detail[0]);
 
   // TODO: Add pause on mouse enter (figure out with params or manually)
 }
