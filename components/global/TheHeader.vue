@@ -3,7 +3,8 @@
 <template>
   <div class="container">
     <header>
-      <BaseIcon name="logo" />
+      <!-- <BaseIcon name="logo" /> -->
+      logo
       <ul>
         <li>
           <BaseLink to="/about">About</BaseLink>
