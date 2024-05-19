@@ -104,7 +104,7 @@
         }
 
         &:nth-of-type(4) {
-          width: 70%;
+          width: 60%;
         }
       }
     }

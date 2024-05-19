@@ -11,6 +11,10 @@
 </template>
 
 <style lang="postcss" scoped>
+main {
+  height: 300vh;
+}
+
 .section-business-card {
   display: flex;
   justify-content: center;

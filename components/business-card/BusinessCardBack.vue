@@ -1,44 +1,34 @@
 <script lang="ts" setup></script>
 
 <template>
-  <div class="business-card-front">
+  <div class="business-card-back">
     <!-- <BaseImage
       src="/texture.jpg"
-      class="business-card-front__texture"
+      class="business-card-back__texture"
       loading="eager"
     /> -->
-    <div class="business-card-front__frame">
-      <div class="business-card-front__stripe"></div>
-    </div>
+    <BaseIcon name="logo" class="business-card-back__logo" />
   </div>
 </template>
 
 <style lang="postcss" scoped>
-.business-card-front {
+.business-card-back {
   box-shadow: var(--shadow-soft);
   aspect-ratio: 5/3;
   width: 100%;
   padding: 24px;
-  position: relative;
+  background-color: var(--color-primary-100);
+  padding: 180px;
 
-  &__frame {
-    position: relative;
-    border: var(--business-card-border);
-    height: 100%;
-    width: 100%;
-    display: grid;
-    grid-template-columns: 270px 1fr;
-  }
+  &__logo {
+    &:deep(svg) {
+      width: 100%;
+      height: 100%;
+    }
 
-  &__stripe {
-    height: 100%;
-    width: 16px;
-    background-color: var(--color-red-100);
-    position: absolute;
-    right: 16px;
-    top: 0;
-    opacity: 0.7;
-    z-index: -1;
+    &:deep(path) {
+      fill: var(--color-secondary-100);
+    }
   }
 
   &__texture {
@@ -54,8 +44,8 @@
     pointer-events: none;
   }
 
-  @media (min-width: 900px) {
+  /* @media (min-width: 900px) {
     width: 800px;
-  }
+  } */
 }
 </style>

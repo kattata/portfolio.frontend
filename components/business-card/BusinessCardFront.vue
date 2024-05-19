@@ -56,8 +56,8 @@
     pointer-events: none;
   }
 
-  @media (min-width: 900px) {
+  /* @media (min-width: 900px) {
     width: 800px;
-  }
+  } */
 }
 </style>
