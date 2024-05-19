@@ -29,7 +29,11 @@
     height: 100%;
     width: 100%;
     display: grid;
-    grid-template-columns: 270px 1fr;
+    grid-template-columns: 2fr 3fr;
+
+    @media (min-width: 900px) {
+      grid-template-columns: 270px 1fr;
+    }
   }
 
   &__stripe {

@@ -47,8 +47,12 @@
 <style lang="postcss" scoped>
 .business-card-right {
   height: 100%;
-  display: grid;
+  display: none;
   grid-template-rows: 1fr 1fr;
+
+  @media (min-width: 900px) {
+    display: grid;
+  }
 
   &__cell {
     &:not(:last-of-type) {

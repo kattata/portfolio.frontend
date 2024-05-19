@@ -22,15 +22,16 @@
   height: 100%;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 50px 1fr;
+  grid-template-rows: 1fr 24px 1fr;
   border-right: var(--business-card-border);
+
+  @media (min-width: 900px) {
+    grid-template-rows: 1fr 50px 1fr;
+  }
 
   &__cell {
     &:not(:last-of-type) {
       border-bottom: var(--business-card-border);
-    }
-
-    &--top {
     }
 
     &--center {
@@ -40,8 +41,17 @@
       gap: 8px;
       justify-content: center;
       align-items: center;
-      font-size: var(--font-size-xs);
+      font-size: var(--font-size-xxs);
       text-transform: uppercase;
+
+      span:nth-child(1),
+      span:nth-child(2) {
+        display: none;
+      }
+
+      @media (min-width: 900px) {
+        font-size: var(--font-size-xs);
+      }
     }
 
     &--bottom {
@@ -53,8 +63,12 @@
 
   &__bar {
     background-color: var(--color-primary-100);
-    height: 60px;
+    height: 20px;
     width: 100%;
+
+    @media (min-width: 900px) {
+      height: 60px;
+    }
   }
 }
 </style>

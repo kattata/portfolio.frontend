@@ -23,7 +23,6 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 24px;
 
   ul {
     padding: 0;

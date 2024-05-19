@@ -39,14 +39,23 @@
 
   .negative-path {
     position: absolute;
-    bottom: 24px;
+    bottom: 0px;
+    width: 100%;
+
+    @media (min-width: 900px) {
+      bottom: 24px;
+    }
   }
 
   textPath {
-    font-size: 16px;
+    font-size: var(--font-size-xxs);
     font-family: var(--font-family-display-secondary);
     text-transform: uppercase;
     fill: var(--color-secondary-100);
+
+    @media (min-width: 900px) {
+      font-size: 16px;
+    }
   }
 }
 </style>

@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { useBreakpoints } from '~~/composables/useBreakpoints';
+
 const skills = computed(() => {
   return ['HTML', 'CSS', 'JAVASCRIPT', 'VUE', 'GIT'];
 });
@@ -10,6 +12,22 @@ function onInit(swiper: any) {
 
   // TODO: Add pause on mouse enter (figure out with params or manually)
 }
+const { isMobile } = useBreakpoints();
+
+// Change swiper into css animation?
+
+const breakpoints = {
+  200: {
+    slidesPerView: 2,
+  },
+  900: {
+    slidesPerView: 2.7,
+  },
+};
+
+const diamondSize = computed(() => {
+  return isMobile() ? '50px' : '100px';
+});
 </script>
 
 <template>
@@ -17,15 +35,15 @@ function onInit(swiper: any) {
     <ClientOnly>
       <swiper-container
         ref="swiperRef"
-        slides-per-view="2.7"
         loop="true"
         centered-slides="true"
         pause-on-mouse-enter="true"
+        :breakpoints="breakpoints"
         @swiperinit="onInit"
       >
         <template v-for="(skill, index) in skills" :key="index">
           <swiper-slide>
-            <BaseDiamond :text="skill" />
+            <BaseDiamond :text="skill" :size="diamondSize" />
           </swiper-slide>
         </template>
       </swiper-container>
@@ -36,11 +54,19 @@ function onInit(swiper: any) {
 <style lang="postcss" scoped>
 .business-card-diamond-slider {
   width: 100%;
-  padding-block: 12px;
+  padding-block: 0;
   height: 100%;
 
+  @media (min-width: 900px) {
+    padding-block: 12px;
+  }
+
   swiper-container {
-    width: 270px;
+    width: 150px;
+
+    @media (min-width: 900px) {
+      width: 270px;
+    }
   }
 
   swiper-slide {
