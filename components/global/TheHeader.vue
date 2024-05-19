@@ -2,9 +2,8 @@
 
 <template>
   <div class="container">
-    <header>
-      <!-- <BaseIcon name="logo" /> -->
-      logo
+    <header class="header">
+      <BaseIcon name="logo" class="header__logo" />
       <ul>
         <li>
           <BaseLink to="/about">About</BaseLink>
@@ -18,7 +17,7 @@
 </template>
 
 <style lang="postcss" scoped>
-header {
+.header {
   margin-top: 24px;
   display: flex;
   justify-content: space-between;
@@ -32,6 +31,13 @@ header {
 
     li {
       list-style-type: none;
+    }
+  }
+
+  &__logo {
+    &:deep(svg) {
+      width: 60px;
+      height: 20px;
     }
   }
 }

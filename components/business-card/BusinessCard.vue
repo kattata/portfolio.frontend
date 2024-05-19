@@ -4,6 +4,9 @@ const showCardFront = ref<boolean>(true);
 function flipCard() {
   showCardFront.value = !showCardFront.value;
 }
+
+const { $t } = useNuxtApp();
+// $t('BusinessCard.Front.Description');
 </script>
 
 <template>

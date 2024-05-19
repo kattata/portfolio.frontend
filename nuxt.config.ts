@@ -11,9 +11,13 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ['nuxt-icons', '@nuxt/image'],
+  modules: ['nuxt-icons', '@nuxt/image', '@nuxtjs/sanity'],
 
   image: {
     dir: 'assets/images',
+  },
+
+  sanity: {
+    projectId: 'gsemtvsw',
   },
 });

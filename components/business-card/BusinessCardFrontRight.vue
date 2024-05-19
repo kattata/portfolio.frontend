@@ -16,11 +16,12 @@
         <div class="divider divider--vertical"></div>
 
         <div class="business-card-right__description">
-          Dedicated to crafting
+          {{ $t('BusinessCard.Front.Description') }}
+          <!-- Dedicated to crafting
           <br />
           high-quality, visually engaging
           <br />
-          web interfaces.
+          web interfaces. -->
         </div>
       </div>
 

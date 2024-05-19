@@ -47,6 +47,10 @@
       span:nth-child(1),
       span:nth-child(2) {
         display: none;
+
+        @media (min-width: 900px) {
+          display: block;
+        }
       }
 
       @media (min-width: 900px) {
