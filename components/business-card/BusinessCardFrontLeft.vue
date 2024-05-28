@@ -19,6 +19,7 @@
 
 <style lang="postcss" scoped>
 .business-card-left {
+  position: relative;
   height: 100%;
   display: grid;
   grid-template-columns: 1fr;

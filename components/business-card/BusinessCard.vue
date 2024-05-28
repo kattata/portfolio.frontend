@@ -9,6 +9,12 @@ function flipCard() {
 
 <template>
   <div class="business-card">
+    <BaseImage
+      src="/texture.jpg"
+      class="texture"
+      loading="eager"
+      :class="{ 'texture--active': !showCardFront }"
+    />
     <div class="business-card__flip">
       <div
         class="business-card__flip-inner"
@@ -36,6 +42,8 @@ function flipCard() {
 <style lang="postcss" scoped>
 .business-card {
   width: 800px;
+  height: 480px;
+  position: relative;
 
   &__flip {
     perspective: 2500px;
@@ -80,4 +88,24 @@ function flipCard() {
     }
   }
 }
+
+.texture {
+    width: 800px;
+    height: 480px;
+    object-fit: cover;
+    mix-blend-mode: screen;
+    opacity: 0.7;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    pointer-events: none;
+    transition: transform 0.6s;
+    perspective: 2500px;
+    transform-style: preserve-3d;
+
+    &--active {
+      transform: rotateY(-180deg);
+    }
+  }
 </style>

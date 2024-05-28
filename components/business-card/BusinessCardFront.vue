@@ -2,11 +2,6 @@
 
 <template>
   <div class="business-card-front">
-    <!-- <BaseImage
-      src="/texture.jpg"
-      class="business-card-front__texture"
-      loading="eager"
-    /> -->
     <div class="business-card-front__frame">
       <BusinessCardFrontLeft />
       <BusinessCardFrontRight />
@@ -46,22 +41,5 @@
     opacity: 0.7;
     z-index: -1;
   }
-
-  &__texture {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    mix-blend-mode: screen;
-    opacity: 0.7;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 10;
-    pointer-events: none;
-  }
-
-  /* @media (min-width: 900px) {
-    width: 800px;
-  } */
 }
 </style>
