@@ -24,27 +24,28 @@ function flipCard() {
     </div>
 
     <div class="business-card__flip-button">
+      <div class="divider divider--horizontal"></div>
       <button class="reset-button" @click="flipCard">
         {{ $t('Components.BusinessCard.Action.FlipCard') }}
       </button>
+      <div class="divider divider--horizontal"></div>
     </div>
   </div>
 </template>
 
 <style lang="postcss" scoped>
 .business-card {
-  margin-top: 60px;
   width: 800px;
 
   &__flip {
     perspective: 2500px;
     width: 100%;
-    height: 100%;
+    height: 480px;
 
     &-inner {
       position: relative;
       width: 100%;
-      height: 100%;
+      height: 480px;
       transition: transform 0.6s;
       transform-style: preserve-3d;
 
@@ -57,7 +58,7 @@ function flipCard() {
     &-back {
       position: absolute;
       width: 100%;
-      height: 100%;
+      height: 480px;
       -webkit-backface-visibility: hidden;
       backface-visibility: hidden;
     }
@@ -68,12 +69,14 @@ function flipCard() {
   }
 
   &__flip-button {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+
     button {
       display: block;
-      position: absolute;
-      left: 50%;
-      bottom: 24px;
-      transform: translate(-50%, 0%);
+      margin: 24px auto;
+      white-space: nowrap;
     }
   }
 }

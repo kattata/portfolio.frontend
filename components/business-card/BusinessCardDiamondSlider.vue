@@ -65,7 +65,7 @@ const diamondSize = computed(() => {
     width: 150px;
 
     @media (min-width: 900px) {
-      width: 270px;
+      width: 268px;
     }
   }
 

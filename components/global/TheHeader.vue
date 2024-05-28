@@ -18,7 +18,7 @@
 
 <style lang="postcss" scoped>
 .header {
-  margin-top: 24px;
+  margin-top: 36px;
   display: flex;
   justify-content: space-between;
   align-items: center;

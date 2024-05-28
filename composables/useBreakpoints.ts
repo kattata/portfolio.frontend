@@ -10,6 +10,6 @@ export function useBreakpoints() {
   }
 
   return {
-    isMobile,
+    isMobile
   };
 }
