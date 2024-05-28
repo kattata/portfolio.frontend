@@ -7,22 +7,13 @@
       <!-- Top row -->
       <div class="business-card-right__row-top">
         <div class="business-card-right__signature">
-          <div class="business-card-right__signature-name">K.Laniecka</div>
-          <div class="business-card-right__signature-title">
-            Frontend Developer
-          </div>
+          <div class="business-card-right__signature-name">{{ $t('Components.BusinessCard.Front.Name') }}</div>
+          <div class="business-card-right__signature-title">{{ $t('Components.BusinessCard.Front.Title.Simple') }}</div>
         </div>
 
         <div class="divider divider--vertical"></div>
 
-        <div class="business-card-right__description">
-          {{ $t('BusinessCard.Front.Description') }}
-          <!-- Dedicated to crafting
-          <br />
-          high-quality, visually engaging
-          <br />
-          web interfaces. -->
-        </div>
+        <div class="business-card-right__description" v-html="$t('Components.BusinessCard.Front.Description')"></div>
       </div>
 
       <!-- Center row -->
@@ -35,11 +26,11 @@
 
       <!-- Bottom row -->
       <div class="business-card-right__row-bottom">
-        <div>Get in touch!</div>
+        <div>{{ $t('Components.BusinessCard.Front.BottomText') }}</div>
 
         <div class="divider divider--vertical"></div>
 
-        <div class="business-card-right__phone">No 50 34 93 98</div>
+        <div class="business-card-right__phone">{{ $t('Components.BusinessCard.Front.Phone.Decorative') }}</div>
       </div>
     </div>
   </div>

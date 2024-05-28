@@ -19,7 +19,7 @@
       />
       <text>
         <textPath startOffset="396px" xlink:href="#curve">
-          Frontend Developer
+          {{ $t('Components.BusinessCard.Front.Title.Decorative') }}
         </textPath>
       </text>
     </svg>

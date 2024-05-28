@@ -11,7 +11,7 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ['nuxt-icons', '@nuxt/image', '@nuxtjs/sanity'],
+  modules: ['nuxt-icons', '@nuxt/image', '@nuxtjs/sanity', '@nuxtjs/i18n'],
 
   image: {
     dir: 'assets/images',
@@ -19,5 +19,23 @@ export default defineNuxtConfig({
 
   sanity: {
     projectId: 'gsemtvsw',
+  },
+
+  i18n: {
+    compilation: {
+      strictMessage: false
+    },
+    locales: [
+      {
+        name: 'English',
+        code: 'en',
+        file: 'en.yaml',
+        iso: 'en',
+        dir: 'ltr'
+      }
+    ],
+    lazy: true,
+    langDir: './locales',
+    defaultLocale: 'en'
   },
 });

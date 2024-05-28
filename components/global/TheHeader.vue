@@ -3,13 +3,13 @@
 <template>
   <div class="container">
     <header class="header">
-      <BaseIcon name="logo" class="header__logo" />
+      <BaseLink to="/" class="header__logo">{{ $t('Header.Logo') }}</BaseLink>
       <ul>
         <li>
-          <BaseLink to="/about">About</BaseLink>
+          <BaseLink to="/about">{{ $t('Header.NavigationItems.About') }}</BaseLink>
         </li>
         <li>
-          <BaseLink to="/experience">Experience</BaseLink>
+          <BaseLink to="/experience">{{ $t('Header.NavigationItems.Experience') }}</BaseLink>
         </li>
       </ul>
     </header>
@@ -22,6 +22,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  text-transform: uppercase;
 
   ul {
     padding: 0;
@@ -31,13 +32,6 @@
 
     li {
       list-style-type: none;
-    }
-  }
-
-  &__logo {
-    &:deep(svg) {
-      width: 60px;
-      height: 20px;
     }
   }
 }

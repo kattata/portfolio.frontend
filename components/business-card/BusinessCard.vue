@@ -5,8 +5,6 @@ function flipCard() {
   showCardFront.value = !showCardFront.value;
 }
 
-const { $t } = useNuxtApp();
-// $t('BusinessCard.Front.Description');
 </script>
 
 <template>
@@ -27,7 +25,7 @@ const { $t } = useNuxtApp();
 
     <div class="business-card__flip-button">
       <button class="reset-button" @click="flipCard">
-        Click to flip the card
+        {{ $t('Components.BusinessCard.Action.FlipCard') }}
       </button>
     </div>
   </div>

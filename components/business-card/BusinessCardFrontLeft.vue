@@ -6,9 +6,9 @@
       <BusinessCardDecorativeTop />
     </div>
     <div class="business-card-left__cell business-card-left__cell--center">
-      <span> Tel. 50 34 93 98 </span>
+      <span>{{ $t('Components.BusinessCard.Front.Phone.Simple') }}</span>
       <span>&#8226;</span>
-      <span> kasia.laniecka@gmail.com </span>
+      <span>{{ $t('Components.BusinessCard.Front.Email') }}</span>
     </div>
     <div class="business-card-left__cell business-card-left__cell--bottom">
       <BusinessCardDiamondSlider />
