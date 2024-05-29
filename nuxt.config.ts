@@ -11,7 +11,13 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ['nuxt-icons', '@nuxt/image', '@nuxtjs/sanity', '@nuxtjs/i18n'],
+  modules: [
+    'nuxt-icons',
+    '@nuxt/image',
+    '@nuxtjs/sanity',
+    '@nuxtjs/i18n',
+    '@nuxt/content'
+  ],
 
   image: {
     dir: 'assets/images',

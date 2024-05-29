@@ -2,6 +2,7 @@ Header:
   Logo: Kasia Laniecka
   NavigationItems:
     About: About
+    Skills: Skills
     Experience: Experience
 Components:
   BusinessCard:

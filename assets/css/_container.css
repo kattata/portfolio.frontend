@@ -3,6 +3,10 @@
   padding: 0 16px;
   margin: auto;
 
+  &--small {
+    max-width: 1000px;
+  }
+
   @media (min-width: 900px) {
     padding: 0 24px;
   }

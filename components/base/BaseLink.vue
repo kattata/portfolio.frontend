@@ -5,8 +5,8 @@ const props = withDefaults(
     target?: string;
   }>(),
   {
-    to: "",
-    target: "_self",
+    to: '',
+    target: '_self'
   }
 );
 </script>
@@ -24,7 +24,7 @@ a {
   transition: all 0.2s ease-in-out;
 
   &:hover {
-    opacity: 0.7;
+    color: var(--color-red-100);
   }
 }
 </style>

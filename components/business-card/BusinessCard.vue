@@ -6,33 +6,35 @@ function flipCard() {
   showCardFront.value = !showCardFront.value;
 }
 
-onMounted(() => {
-  document.addEventListener('mousemove', parallax);
-})
+// onMounted(() => {
+//   document.addEventListener('mousemove', parallax);
+// })
 
-function parallax (e: any) {
-  if (!businessCardRef.value) {
-    return;
-  }
+// function parallax (e: any) {
+//   if (!businessCardRef.value) {
+//     return;
+//   }
 
-  const cursorX = e.clientX / window.innerWidth;
-  const cursorY = e.clientY / window.innerHeight;
+//   const cursorX = e.clientX / window.innerWidth;
+//   const cursorY = e.clientY / window.innerHeight;
 
-  const x = ((cursorX - 0.5) * 30) * -1;
-  const y = ((cursorY - 0.5) * 30) * -1;
-  businessCardRef.value.style.transform = `translate(${x}px, ${y}px)`;
-}
+//   const x = ((cursorX - 0.5) * 30) * -1;
+//   const y = ((cursorY - 0.5) * 30) * -1;
+//   businessCardRef.value.style.transform = `translate(${x}px, ${y}px)`;
+// }
+
+// TODO: Add loader before texture loads
 
 </script>
 
 <template>
-  <div class="business-card"  ref="businessCardRef">
-    <!-- <BaseImage
+  <div ref="businessCardRef" class="business-card" @click="flipCard">
+    <BaseImage
       src="/texture.jpg"
       class="texture"
       loading="eager"
       :class="{ 'texture--active': !showCardFront }"
-    /> -->
+    />
     <div class="business-card__flip">
       <div
         class="business-card__flip-inner"
@@ -49,7 +51,7 @@ function parallax (e: any) {
 
     <div class="business-card__flip-button">
       <div class="divider divider--horizontal"></div>
-      <button class="reset-button" @click="flipCard">
+      <button class="reset-button">
         {{ $t('Components.BusinessCard.Action.FlipCard') }}
       </button>
       <div class="divider divider--horizontal"></div>
@@ -63,6 +65,7 @@ function parallax (e: any) {
   height: 480px;
   position: absolute;
   transition: all 0.0001s ease-in-out;
+  cursor: pointer;
 
   &__flip {
     perspective: 2500px;
@@ -102,7 +105,7 @@ function parallax (e: any) {
 
     button {
       display: block;
-      margin: 24px auto;
+      margin: 36px auto;
       white-space: nowrap;
     }
   }

@@ -2,7 +2,9 @@
 
 <template>
   <div class="container">
-    <main>Content</main>
+    <main>
+      <!-- <ContentDoc /> -->
+    </main>
   </div>
 </template>
 

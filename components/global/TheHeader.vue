@@ -3,13 +3,25 @@
 <template>
   <div class="container">
     <header class="header">
-      <BaseLink to="/" class="header__logo">{{ $t('Header.Logo') }}</BaseLink>
+      <BaseLink to="/" class="header__logo">
+        {{ $t('Header.Logo') }}
+      </BaseLink>
+      <div class="divider divider--horizontal"></div>
       <ul>
         <li>
-          <BaseLink to="/about">{{ $t('Header.NavigationItems.About') }}</BaseLink>
+          <BaseLink to="#about">
+            {{ $t('Header.NavigationItems.About') }}
+          </BaseLink>
         </li>
         <li>
-          <BaseLink to="/experience">{{ $t('Header.NavigationItems.Experience') }}</BaseLink>
+          <BaseLink to="#skills">
+            {{ $t('Header.NavigationItems.Skills') }}
+          </BaseLink>
+        </li>
+        <li>
+          <BaseLink to="#experience">
+            {{ $t('Header.NavigationItems.Experience') }}
+          </BaseLink>
         </li>
       </ul>
     </header>
@@ -20,6 +32,7 @@
 .header {
   margin-top: 36px;
   display: flex;
+  gap: 16px;
   justify-content: space-between;
   align-items: center;
   text-transform: uppercase;
@@ -33,6 +46,10 @@
     li {
       list-style-type: none;
     }
+  }
+
+  &__logo {
+    white-space: nowrap;
   }
 }
 </style>

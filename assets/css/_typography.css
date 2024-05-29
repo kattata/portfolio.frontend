@@ -22,6 +22,7 @@ h3,
 p,
 .p {
   font-size: var(--font-size-m);
+  font-family: var(--font-family-base-secondary);
   margin-bottom: 8px;
 }
 
