@@ -7,8 +7,12 @@
       <!-- Top row -->
       <div class="business-card-right__row-top">
         <div class="business-card-right__signature">
-          <div class="business-card-right__signature-name">{{ $t('Components.BusinessCard.Front.Name') }}</div>
-          <div class="business-card-right__signature-title">{{ $t('Components.BusinessCard.Front.Title.Simple') }}</div>
+          <div class="business-card-right__signature-name">
+            {{ $t('Components.BusinessCard.Front.Name') }}
+          </div>
+          <div class="business-card-right__signature-title">
+            {{ $t('Components.BusinessCard.Front.Title.Simple') }}
+          </div>
         </div>
 
         <div class="divider divider--vertical"></div>
@@ -30,7 +34,9 @@
 
         <div class="divider divider--vertical"></div>
 
-        <div class="business-card-right__phone">{{ $t('Components.BusinessCard.Front.Phone.Decorative') }}</div>
+        <div class="business-card-right__phone">
+          {{ $t('Components.BusinessCard.Front.Phone.Decorative') }}
+        </div>
       </div>
     </div>
   </div>

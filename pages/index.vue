@@ -7,31 +7,38 @@ const { data: aboutData } = await useLazyAsyncData('about', () =>
 </script>
 
 <template>
-  <div class="container">
-    <main>
-      <template v-if="!useBreakpoints().isMobile()">
+  <main>
+    <template v-if="!useBreakpoints().isMobile()">
+      <div class="container">
         <section class="section section-business-card">
           <BusinessCard />
         </section>
-      </template>
+      </div>
+    </template>
 
-      <template v-if="aboutData">
-        <div class="container container--small">
-          <section id="about" class="section section--centered section-about">
+    <template v-if="aboutData">
+      <div class="container container--small">
+        <section id="about" class="section section--centered section-about">
+          <div>
+            <div class="section__heading">
+              <h2 class="h1">
+                About
+              </h2>
+            </div>
             <BaseMarkdownRenderer :content="aboutData" />
-          </section>
-        </div>
-      </template>
-
-      <template v-if="skills">
-        <section id="skills" class="section section--centered section-skills">
-          <template v-for="skill in skills" :key="skill.title">
-            <BaseSkill :title="skill.title" :image="skill.img" />
-          </template>
+          </div>
         </section>
-      </template>
-    </main>
-  </div>
+      </div>
+    </template>
+
+    <template v-if="skills">
+      <section id="skills" class="section section--centered section-skills">
+        <template v-for="skill in skills" :key="skill.title">
+          <BaseSkill :title="skill.title" :image="skill.img" />
+        </template>
+      </section>
+    </template>
+  </main>
 </template>
 
 <style lang="postcss" scoped>
@@ -54,7 +61,6 @@ const { data: aboutData } = await useLazyAsyncData('about', () =>
 
   &--centered {
     display: flex;
-    justify-content: center;
     align-items: center;
   }
 }
