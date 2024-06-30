@@ -1,14 +1,25 @@
 <script lang="ts" setup>
 import { experiences } from '~~/content/ts/experiences';
 
-const { formatMonthYear } = useDateFormatter()
+const { formatMonthYear, formatYear } = useDateFormatter()
 // const props = defineProps<{
 //   experiences: string;
 // }>();
 
-function constructDuration(startDate: string, endDate: string | null) {
+function constructMonthYearDuration(startDate: string, endDate: string | null) {
     const start = formatMonthYear(startDate);
     const end = endDate ? formatMonthYear(endDate) : 'now';
+
+    return `${start} - ${end}`;
+}
+
+function constructYearDuration(startDate: string, endDate: string | null) {
+    const start = formatYear(startDate);
+    const end = endDate ? formatYear(endDate) : 'now';
+
+    if (start === end) {
+        return start;
+    }
 
     return `${start} - ${end}`;
 }
@@ -24,7 +35,7 @@ function constructDuration(startDate: string, endDate: string | null) {
               {{ item.company }}
             </div>
             <div class="text-small">
-              2022 - now
+              {{ constructYearDuration(item.startDate,item.endDate) }}
             </div>
           </div>
         </template>
@@ -37,7 +48,7 @@ function constructDuration(startDate: string, endDate: string | null) {
               {{ item.role }}
             </div>
             <div class="text-extra-small">
-              {{ constructDuration(item.startDate,item.endDate) }}
+              {{ constructMonthYearDuration(item.startDate,item.endDate) }}
             </div>
             <ul>
               <template v-for="(highlight, index) in item.highlights" :key="`experience-highlight__${index}`">

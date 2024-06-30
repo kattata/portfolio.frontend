@@ -5,7 +5,12 @@ export function useDateFormatter () {
         return format(new Date(date), 'MMM yyyy');
     }
 
+    function formatYear(date: string) {
+        return format(new Date(date), 'yyyy');
+    }
+
     return {
-        formatMonthYear
+        formatMonthYear,
+        formatYear
     }
 }
