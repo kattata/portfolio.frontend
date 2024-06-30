@@ -3,6 +3,7 @@ h1,
   font-family: var(--font-family-display);
   font-size: var(--h1-font-size);
   margin-bottom: 12px;
+  font-weight: bold;
 }
 
 h2,
@@ -10,6 +11,7 @@ h2,
   font-family: var(--font-family-base);
   font-size: var(--h2-font-size);
   margin-bottom: 10px;
+  font-weight: bold;
 }
 
 h3,
@@ -17,6 +19,7 @@ h3,
   font-family: var(--font-family-base);
   font-size: var(--h3-font-size);
   margin-bottom: 8px;
+  font-weight: bold;
 }
 
 p,

@@ -5,7 +5,7 @@ const props = defineProps<{
 </script>
 
 <template>
-  <ContentRendererMarkdown :value="props.content" />
+  <ContentRendererMarkdown :value="props.content" class="content-renderer" />
 </template>
 
 <style lang="postcss" scoped></style>

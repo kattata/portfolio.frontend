@@ -5,14 +5,14 @@ const props = withDefaults(
     loading?: boolean;
     disabled?: boolean;
     modifiers?: string[];
-    type?: "button" | "submit" | "reset";
-    variant?: "primary" | "secondary" | "tertiary";
+    type?: 'button' | 'submit' | 'reset';
+    variant?: 'primary' | 'secondary' | 'tertiary';
   }>(),
   {
-    to: () => "",
+    to: () => '',
     modifiers: () => [],
-    type: "button",
-    variant: "primary",
+    type: 'button',
+    variant: 'primary'
   }
 );
 
@@ -23,7 +23,7 @@ const buttonClasses = computed(() => {
     return variant;
   }
 
-  const modifiers = props.modifiers.map((x: any) => `button--${x}`).join(" ");
+  const modifiers = props.modifiers.map((x: any) => `button--${x}`).join(' ');
 
   return [variant, ...modifiers];
 });

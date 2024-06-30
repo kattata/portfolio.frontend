@@ -1,7 +1,12 @@
 <script lang="ts" setup>
-import { skills } from '~~/content/ts/skills'
+import { skills } from '~~/content/ts/skills';
+
 const { data: aboutData } = await useLazyAsyncData('about', () =>
   queryContent('md', 'about').findOne()
+);
+
+const { data: experienceData } = await useLazyAsyncData('experience', () =>
+  queryContent('md', 'experience').findOne()
 );
 
 </script>
@@ -26,6 +31,20 @@ const { data: aboutData } = await useLazyAsyncData('about', () =>
               </h2>
             </div>
             <BaseMarkdownRenderer :content="aboutData" />
+          </div>
+        </section>
+      </div>
+    </template>
+
+    <template v-if="experienceData">
+      <div class="container container--small">
+        <section id="experience" class="section section--centered section-experience">
+          <div>
+            <h2 class="h1">
+              Experience
+            </h2>
+            <BaseMarkdownRenderer :content="experienceData" />
+            <ExperienceCardList />
           </div>
         </section>
       </div>
@@ -57,6 +76,12 @@ const { data: aboutData } = await useLazyAsyncData('about', () =>
     display: flex;
     gap: 24px;
     justify-content: center;
+  }
+
+  &-experience {
+    :deep(.content-renderer) {
+      margin-bottom: 24px;
+    }
   }
 
   &--centered {
