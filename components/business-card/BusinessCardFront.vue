@@ -38,7 +38,6 @@
     position: absolute;
     right: 16px;
     top: 0;
-    opacity: 0.7;
     z-index: -1;
   }
 }
