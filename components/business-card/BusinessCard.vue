@@ -24,7 +24,6 @@ function flipCard() {
 // }
 
 // TODO: Add loader before texture loads
-
 </script>
 
 <template>
@@ -112,22 +111,22 @@ function flipCard() {
 }
 
 .texture {
-    width: 800px;
-    height: 480px;
-    object-fit: cover;
-    mix-blend-mode: screen;
-    opacity: 0.7;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 10;
-    pointer-events: none;
-    transition: transform 0.6s;
-    perspective: 2500px;
-    transform-style: preserve-3d;
+  width: 800px;
+  height: 480px;
+  object-fit: cover;
+  mix-blend-mode: screen;
+  opacity: 0.7;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  pointer-events: none;
+  transition: transform 0.6s;
+  perspective: 2500px;
+  transform-style: preserve-3d;
 
-    &--active {
-      transform: rotateY(-180deg);
-    }
+  &--active {
+    transform: rotateY(-180deg);
   }
+}
 </style>

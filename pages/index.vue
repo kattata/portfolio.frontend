@@ -8,7 +8,6 @@ const { data: aboutData } = await useLazyAsyncData('about', () =>
 const { data: experienceData } = await useLazyAsyncData('experience', () =>
   queryContent('md', 'experience').findOne()
 );
-
 </script>
 
 <template>
@@ -26,9 +25,7 @@ const { data: experienceData } = await useLazyAsyncData('experience', () =>
         <section id="about" class="section section--centered section-about">
           <div>
             <div class="section__heading">
-              <h2 class="h1">
-                About
-              </h2>
+              <h2 class="h1">About</h2>
             </div>
             <BaseMarkdownRenderer :content="aboutData" />
           </div>
@@ -38,11 +35,12 @@ const { data: experienceData } = await useLazyAsyncData('experience', () =>
 
     <template v-if="experienceData">
       <div class="container container--small">
-        <section id="experience" class="section section--centered section-experience">
+        <section
+          id="experience"
+          class="section section--centered section-experience"
+        >
           <div>
-            <h2 class="h1">
-              Experience
-            </h2>
+            <h2 class="h1">Experience</h2>
             <BaseMarkdownRenderer :content="experienceData" />
             <ExperienceCardList />
           </div>

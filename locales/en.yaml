@@ -8,13 +8,13 @@ Components:
   BusinessCard:
     Action:
       FlipCard: Click to flip the card
-    Front: 
+    Front:
       Description: Dedicated to crafting <br /> high-quality, visually engaging <br /> web interfaces.
       Name: K. Laniecka
-      Title: 
+      Title:
         Decorative: Frontend Developer
         Simple: Frontend Developer
-      Phone: 
+      Phone:
         Decorative: No 50 34 93 98
         Simple: Tel. 50 34 93 98
       Email: kasia.laniecka{'@'}gmail.com

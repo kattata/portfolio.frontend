@@ -18,11 +18,11 @@ const { isMobile } = useBreakpoints();
 
 const breakpoints = {
   200: {
-    slidesPerView: 2,
+    slidesPerView: 2
   },
   900: {
-    slidesPerView: 2.7,
-  },
+    slidesPerView: 2.7
+  }
 };
 
 const diamondSize = computed(() => {

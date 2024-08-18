@@ -5,5 +5,3 @@ Responsive design, perfomance or accessibility are fundamentals that I take very
 I have experience in building a variety of websites, such as large-scale e-commerce platforms or user management systems, which has taught me a great deal about working in a team to bring an idea to life. \
 \
 I also like to work on my own applications, which you can preview below, together with some of my student projects.
-
-

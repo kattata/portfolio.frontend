@@ -7,8 +7,8 @@ export default defineNuxtConfig({
   postcss: {
     plugins: {
       'postcss-nested': {},
-      'postcss-preset-env': {},
-    },
+      'postcss-preset-env': {}
+    }
   },
 
   modules: [
@@ -20,11 +20,11 @@ export default defineNuxtConfig({
   ],
 
   image: {
-    dir: 'assets/images',
+    dir: 'assets/images'
   },
 
   sanity: {
-    projectId: 'gsemtvsw',
+    projectId: 'gsemtvsw'
   },
 
   i18n: {
@@ -43,5 +43,5 @@ export default defineNuxtConfig({
     lazy: true,
     langDir: './locales',
     defaultLocale: 'en'
-  },
+  }
 });

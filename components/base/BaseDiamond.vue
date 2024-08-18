@@ -6,7 +6,7 @@ const props = withDefaults(
   }>(),
   {
     text: '',
-    size: '100px',
+    size: '100px'
   }
 );
 </script>

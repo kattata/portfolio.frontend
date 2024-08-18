@@ -10,12 +10,12 @@
   },
   "overrides": [
     {
-        "files": ["*.vue", "**/*.vue","**/*.css"],
-        "rules": {
-            "selector-class-pattern": null,
-            "import-notation": "string",
-            "media-feature-range-notation": null
-        }
+      "files": ["*.vue", "**/*.vue", "**/*.css"],
+      "rules": {
+        "selector-class-pattern": null,
+        "import-notation": "string",
+        "media-feature-range-notation": null
+      }
     }
   ]
 }

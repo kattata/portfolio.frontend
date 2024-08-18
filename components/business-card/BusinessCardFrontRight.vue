@@ -17,7 +17,10 @@
 
         <div class="divider divider--vertical"></div>
 
-        <div class="business-card-right__description" v-html="$t('Components.BusinessCard.Front.Description')"></div>
+        <div
+          class="business-card-right__description"
+          v-html="$t('Components.BusinessCard.Front.Description')"
+        ></div>
       </div>
 
       <!-- Center row -->
