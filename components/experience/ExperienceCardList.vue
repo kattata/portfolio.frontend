@@ -2,9 +2,6 @@
 import { experiences } from '~~/content/ts/experiences';
 
 const { formatMonthYear, formatYear } = useDateFormatter();
-// const props = defineProps<{
-//   experiences: string;
-// }>();
 
 function constructMonthYearDuration(startDate: string, endDate: string | null) {
   const start = formatMonthYear(startDate);
@@ -42,6 +39,7 @@ function constructYearDuration(startDate: string, endDate: string | null) {
             </div>
           </div>
         </template>
+
         <template #expanded>
           <div class="experience-card__expanded">
             <div class="badge">

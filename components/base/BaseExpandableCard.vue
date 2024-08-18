@@ -15,7 +15,6 @@
 
 <style lang="postcss" scoped>
 .expandable-card {
-  border: 1px solid var(--color-primary-100);
   width: 150px;
   height: 400px;
   transition: all 0.5s ease-in-out;
@@ -29,6 +28,8 @@
     overflow: hidden;
 
     &--collapsed {
+      background-color: var(--color-red-100);
+      color: var(--color-secondary-100);
       transition: all 0.5s ease-in-out;
       opacity: 1;
       text-align: center;
@@ -43,6 +44,7 @@
     }
 
     &--expanded {
+      border: 1px solid var(--color-red-100);
       transition: all 0.5s ease-in-out;
       padding: 24px;
       min-width: 400px;
