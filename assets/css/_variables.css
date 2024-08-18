@@ -2,38 +2,31 @@
   /* Colors */
   --color-primary-100: #4e382f;
   --color-primary-10: #c6ae78;
-
   --color-secondary-100: #e4cb8a;
-
-  --color-white-100: #ffffff;
-
+  --color-white-100: #fff;
   --color-red-100: #a43b34;
-
   --color-text: var(--color-primary-100);
 
   /* Shadows */
-  --shadow-soft: 0 0 24px rgba(0, 0, 0, 0.1);
-  --shadow-default: 10px 10px 60px rgba(0, 0, 0, 0.4);
+  --shadow-soft: 0 0 24px rgb(0 0 0 / 10%);
+  --shadow-default: 10px 10px 60px rgb(0 0 0 / 40%);
 
   /* Skeleton */
   --color-skeleton-light: var(--color-primary-10);
   --color-skeleton-dark: var(--color-primary-10);
 
   /* Typography */
-  --font-family-base-primary: 'Saira';
-  --font-family-base-secondary: 'Rubik';
-  --font-family-display-primary: 'Stencil';
-  --font-family-display-secondary: 'Rye';
-  --font-family-handwriting-primary: 'Luxurious';
-
+  --font-family-base-primary: "Saira";
+  --font-family-base-secondary: "Rubik";
+  --font-family-display-primary: "Stencil";
+  --font-family-display-secondary: "Rye";
+  --font-family-handwriting-primary: "Luxurious";
   --line-height-base: 1.2;
-
   --font-size-xxs: 10px;
   --font-size-xs: 12px;
   --font-size-s: 14px;
   --font-size-m: 16px;
   --font-size-l: 18px;
-
   --h1-font-size: 40px;
   --h2-font-size: 24px;
   --h3-font-size: 16px;

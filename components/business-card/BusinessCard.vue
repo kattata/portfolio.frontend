@@ -89,7 +89,7 @@ function flipCard() {
       position: absolute;
       width: 100%;
       height: 480px;
-      -webkit-backface-visibility: hidden;
+      -webkit-backface-visibility: hidden; /* stylelint-disable-line */
       backface-visibility: hidden;
     }
 

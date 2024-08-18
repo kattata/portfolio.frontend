@@ -11,7 +11,8 @@
   box-shadow: var(--shadow-soft);
   aspect-ratio: 5/3;
   width: 100%;
-  padding: 24px;
+
+  /* padding: 24px; */
   background-color: var(--color-primary-100);
   padding: 180px;
 

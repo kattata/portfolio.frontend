@@ -67,6 +67,7 @@ const { data: experienceData } = await useLazyAsyncData('experience', () =>
   &-business-card {
     justify-content: center;
     align-items: center;
+
     /* Screen height - header height */
     height: calc(100vh - (36px + 19px));
     display: flex;

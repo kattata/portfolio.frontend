@@ -39,7 +39,7 @@
 
   .negative-path {
     position: absolute;
-    bottom: 0px;
+    bottom: 0;
     width: 100%;
 
     @media (min-width: 900px) {

@@ -8,9 +8,10 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "lint": "npx stylelint '**/*.{css,vue}' --fix",
-    "format": "prettier --write --list-different .",
-    "format:check": "prettier . --debug-check"
+    "lint": "npx stylelint '**/*.{css,vue}",
+    "lint:fix": "npx stylelint '**/*.{css,vue} --fix",
+    "format": "prettier . --debug-check",
+    "format:fix": "prettier --write --list-different ."
   },
   "dependencies": {
     "@nuxt/content": "^2.12.1",

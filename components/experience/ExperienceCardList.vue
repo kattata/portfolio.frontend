@@ -70,9 +70,6 @@ function constructYearDuration(startDate: string, endDate: string | null) {
 }
 
 .experience-card {
-    &__collapsed {
-    }
-
     &__expanded {
 
         ul {
