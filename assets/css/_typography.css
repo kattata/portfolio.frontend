@@ -1,8 +1,8 @@
 h1,
 .h1 {
-  font-family: var(--font-family-display);
+  font-family: var(--font-family-display-primary);
   font-size: var(--h1-font-size);
-  margin-bottom: 12px;
+  margin-bottom: 16px;
   font-weight: bold;
 }
 

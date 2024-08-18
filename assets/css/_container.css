@@ -1,5 +1,5 @@
 .container {
-  max-width: 1200px;
+  max-width: var(--container-width-m);
   padding: 0 16px;
   margin: auto;
 
@@ -8,7 +8,7 @@
   }
 
   &--small {
-    max-width: 1000px;
+    max-width: var(--container-width-s);
   }
 
   &--no-padding {

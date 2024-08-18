@@ -24,13 +24,10 @@ function constructYearDuration(startDate: string, endDate: string | null) {
 
 <template>
   <div class="experience-card-list">
-    <template
-      v-for="item in experiences"
-      :key="`experience-card__${item.role}-${item.company}`"
-    >
+    <template v-for="item in experiences" :key="`experience-card__${item.role}-${item.company}`">
       <BaseExpandableCard>
         <template #collapsed>
-          <div class="experience-card__collapsed">
+          <div class="experience-card experience-card__collapsed">
             <div class="h3">
               {{ item.company }}
             </div>
@@ -41,7 +38,7 @@ function constructYearDuration(startDate: string, endDate: string | null) {
         </template>
 
         <template #expanded>
-          <div class="experience-card__expanded">
+          <div class="experience-card experience-card__expanded">
             <div class="badge">
               {{ item.company }}
             </div>
@@ -52,10 +49,7 @@ function constructYearDuration(startDate: string, endDate: string | null) {
               {{ constructMonthYearDuration(item.startDate, item.endDate) }}
             </div>
             <ul>
-              <template
-                v-for="(highlight, index) in item.highlights"
-                :key="`experience-highlight__${index}`"
-              >
+              <template v-for="(highlight, index) in item.highlights" :key="`experience-highlight__${index}`">
                 <li>{{ highlight }}</li>
               </template>
             </ul>
@@ -69,8 +63,10 @@ function constructYearDuration(startDate: string, endDate: string | null) {
 <style lang="postcss" scoped>
 .experience-card-list {
   display: flex;
+  flex-direction: column @(min-width: 900px) row;
   gap: 12px;
   font-family: var(--font-family-base-secondary);
+  padding-top: 12px;
 }
 
 .experience-card {

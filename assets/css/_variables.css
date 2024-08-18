@@ -35,4 +35,8 @@
 
   /* Border */
   --border-radius-default: 8px;
+
+  /* Spacing */
+  --container-width-s: 1000px;
+  --container-width-m: 1200px;
 }

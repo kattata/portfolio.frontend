@@ -1,4 +1,6 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+// TODO: Make size customizable
+</script>
 
 <template>
   <div class="expandable-card">
@@ -15,8 +17,11 @@
 
 <style lang="postcss" scoped>
 .expandable-card {
-  width: 150px;
-  height: 400px;
+  --collapsed-width: 100% @(min-width: 900px) 150px;
+  --expanded-width: 100% @(min-width: 900px) 400px;
+
+  height: 350px;
+  width: var(--collapsed-width);
   transition: all 0.5s ease-in-out;
 
   &__content {
@@ -39,7 +44,7 @@
       justify-content: center;
       height: 100%;
       padding: 16px;
-      min-width: 150px;
+      min-width: var(--collapsed-width);
       overflow: hidden;
     }
 
@@ -47,20 +52,20 @@
       border: 1px solid var(--color-red-100);
       transition: all 0.5s ease-in-out;
       padding: 24px;
-      min-width: 400px;
+      min-width: var(--expanded-width);
       overflow: hidden;
     }
   }
 
   &:hover {
-    width: 400px;
+    width: var(--expanded-width);
 
     .expandable-card__content--collapsed {
-      transform: translateX(-150px);
+      transform: translateX(calc(var(--collapsed-width) * -1));
     }
 
     .expandable-card__content--expanded {
-      transform: translateX(-150px);
+      transform: translateX(calc(var(--collapsed-width) * -1));
     }
   }
 }

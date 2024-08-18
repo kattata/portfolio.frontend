@@ -7,17 +7,21 @@ export default defineNuxtConfig({
   postcss: {
     plugins: {
       'postcss-nested': {},
-      'postcss-preset-env': {}
+      'postcss-preset-env': {},
+      'postcss-inline-media': {}
     }
   },
 
-  modules: [
-    'nuxt-icons',
-    '@nuxt/image',
-    '@nuxtjs/sanity',
-    '@nuxtjs/i18n',
-    '@nuxt/content'
+  components: [
+    { path: '~/components' },
+    { path: '~/components/base' },
+    { path: '~/components/business-card' },
+    { path: '~/components/experience' },
+    { path: '~/components/global' },
+    { path: '~/components/skills' }
   ],
+
+  modules: ['nuxt-icons', '@nuxt/image', '@nuxtjs/sanity', '@nuxtjs/i18n', '@nuxt/content'],
 
   image: {
     dir: 'assets/images'
@@ -29,8 +33,7 @@ export default defineNuxtConfig({
 
   vue: {
     compilerOptions: {
-      isCustomElement: (tag: string) =>
-        ['swiper-container', 'swiper-slide'].includes(tag)
+      isCustomElement: (tag: string) => ['swiper-container', 'swiper-slide'].includes(tag)
     }
   },
 

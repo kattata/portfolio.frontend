@@ -7,5 +7,3 @@ const props = defineProps<{
 <template>
   <ContentRendererMarkdown :value="props.content" class="content-renderer" />
 </template>
-
-<style lang="postcss" scoped></style>
