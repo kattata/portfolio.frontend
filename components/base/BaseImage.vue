@@ -7,5 +7,3 @@ const props = defineProps<{
 <template>
   <NuxtImg :src="props.src" v-bind="$attrs" />
 </template>
-
-<style lang="postcss" scoped></style>

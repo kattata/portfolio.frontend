@@ -1,4 +1,7 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import { NavigationItemEnum } from '~/types/navigation';
+import { getNavigationItemByName } from '~/utils/navigation';
+</script>
 
 <template>
   <header class="header">
@@ -6,23 +9,32 @@
 
     <div class="container container--no-padding">
       <div class="header__inner">
-        <BaseLink to="/" class="header__logo">
+        <BaseLink
+          :to="getNavigationItemByName(NavigationItemEnum.Home)?.url"
+          class="header__logo"
+        >
           {{ $t('Header.Logo') }}
         </BaseLink>
         <ul>
           <li>
-            <BaseLink to="#about">
-              {{ $t('Header.NavigationItems.About') }}
+            <BaseLink
+              :to="getNavigationItemByName(NavigationItemEnum.About)?.url"
+            >
+              {{ getNavigationItemByName(NavigationItemEnum.About)?.name }}
             </BaseLink>
           </li>
           <li>
-            <BaseLink to="#skills">
-              {{ $t('Header.NavigationItems.Skills') }}
+            <BaseLink
+              :to="getNavigationItemByName(NavigationItemEnum.Experience)?.url"
+            >
+              {{ getNavigationItemByName(NavigationItemEnum.Experience)?.name }}
             </BaseLink>
           </li>
           <li>
-            <BaseLink to="#experience">
-              {{ $t('Header.NavigationItems.Experience') }}
+            <BaseLink
+              :to="getNavigationItemByName(NavigationItemEnum.Skills)?.url"
+            >
+              {{ getNavigationItemByName(NavigationItemEnum.Skills)?.name }}
             </BaseLink>
           </li>
         </ul>

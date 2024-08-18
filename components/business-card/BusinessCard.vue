@@ -1,29 +1,16 @@
 <script lang="ts" setup>
 const showCardFront = ref<boolean>(true);
 const businessCardRef = ref(null);
+const hasTextureLoaded = ref<boolean>(false);
 
 function flipCard() {
   showCardFront.value = !showCardFront.value;
 }
 
-// onMounted(() => {
-//   document.addEventListener('mousemove', parallax);
-// })
-
-// function parallax (e: any) {
-//   if (!businessCardRef.value) {
-//     return;
-//   }
-
-//   const cursorX = e.clientX / window.innerWidth;
-//   const cursorY = e.clientY / window.innerHeight;
-
-//   const x = ((cursorX - 0.5) * 30) * -1;
-//   const y = ((cursorY - 0.5) * 30) * -1;
-//   businessCardRef.value.style.transform = `translate(${x}px, ${y}px)`;
-// }
-
 // TODO: Add loader before texture loads
+function handleLoad() {
+  hasTextureLoaded.value = true;
+}
 </script>
 
 <template>
@@ -33,6 +20,7 @@ function flipCard() {
       class="texture"
       loading="eager"
       :class="{ 'texture--active': !showCardFront }"
+      @load="handleLoad"
     />
     <div class="business-card__flip">
       <div

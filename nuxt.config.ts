@@ -27,6 +27,13 @@ export default defineNuxtConfig({
     projectId: 'gsemtvsw'
   },
 
+  vue: {
+    compilerOptions: {
+      isCustomElement: (tag: string) =>
+        ['swiper-container', 'swiper-slide'].includes(tag)
+    }
+  },
+
   i18n: {
     compilation: {
       strictMessage: false
