@@ -1,10 +1,23 @@
 export const skills = [
   {
-    title: 'JavaScript',
-    img: '/js.png'
+    title: 'JavaScript'
   },
   {
-    title: 'HTML',
-    img: '/html.png'
+    title: 'TypeScript'
+  },
+  {
+    title: 'HTML'
+  },
+  {
+    title: 'CSS'
+  },
+  {
+    title: 'Vue'
+  },
+  {
+    title: 'Nuxt'
+  },
+  {
+    title: 'Git'
   }
 ];

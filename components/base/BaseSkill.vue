@@ -13,21 +13,14 @@ const props = withDefaults(
 
 <template>
   <div class="skill">
-    <div>{{ props.title }}</div>
-    <BaseImage :src="props.image" />
+    <BaseDiamond :text="props.title" :size="'125px'" />
   </div>
 </template>
 
 <style lang="postcss" scoped>
-.skill {
+/* .skill {
   display: flex;
   flex-direction: column;
   gap: 12px;
-
-  img {
-    width: 100px;
-    height: 100px;
-    object-fit: contain;
-  }
-}
+} */
 </style>

@@ -1,8 +1,9 @@
 <script lang="ts" setup>
 import { useBreakpoints } from '~~/composables/useBreakpoints';
+import { skills } from '~~/content/ts/skills';
 
-const skills = computed(() => {
-  return ['HTML', 'CSS', 'JAVASCRIPT', 'VUE', 'GIT'];
+const skillList = computed(() => {
+  return skills.map(skill => skill.title);
 });
 
 function onInit(swiper: any) {
@@ -41,7 +42,7 @@ const diamondSize = computed(() => {
         :breakpoints="breakpoints"
         @swiperinit="onInit"
       >
-        <template v-for="(skill, index) in skills" :key="index">
+        <template v-for="(skill, index) in skillList" :key="index">
           <swiper-slide>
             <BaseDiamond :text="skill" :size="diamondSize" />
           </swiper-slide>

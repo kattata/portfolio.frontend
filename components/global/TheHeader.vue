@@ -1,6 +1,7 @@
 <script lang="ts" setup>
+import { getNavigationItems } from '~/content/ts/navigation';
 import { NavigationItemEnum } from '~/types/navigation';
-import { getNavigationItemByName } from '~/utils/navigation';
+import { getNavigationItemById } from '~/utils/navigation';
 </script>
 
 <template>
@@ -9,34 +10,18 @@ import { getNavigationItemByName } from '~/utils/navigation';
 
     <div class="container container--no-padding">
       <div class="header__inner">
-        <BaseLink
-          :to="getNavigationItemByName(NavigationItemEnum.Home)?.url"
-          class="header__logo"
-        >
+        <BaseLink :to="getNavigationItemById(NavigationItemEnum.Home)?.url" class="header__logo">
           {{ $t('Header.Logo') }}
         </BaseLink>
+
         <ul>
-          <li>
-            <BaseLink
-              :to="getNavigationItemByName(NavigationItemEnum.About)?.url"
-            >
-              {{ getNavigationItemByName(NavigationItemEnum.About)?.name }}
-            </BaseLink>
-          </li>
-          <li>
-            <BaseLink
-              :to="getNavigationItemByName(NavigationItemEnum.Experience)?.url"
-            >
-              {{ getNavigationItemByName(NavigationItemEnum.Experience)?.name }}
-            </BaseLink>
-          </li>
-          <li>
-            <BaseLink
-              :to="getNavigationItemByName(NavigationItemEnum.Skills)?.url"
-            >
-              {{ getNavigationItemByName(NavigationItemEnum.Skills)?.name }}
-            </BaseLink>
-          </li>
+          <template v-for="item in getNavigationItems()" :key="`nav-item__${item.id}`">
+            <li>
+              <BaseLink :to="getNavigationItemById(item.id as NavigationItemEnum)?.url">
+                {{ getNavigationItemById(item.id as NavigationItemEnum)?.name }}
+              </BaseLink>
+            </li>
+          </template>
         </ul>
       </div>
     </div>
@@ -60,7 +45,7 @@ import { getNavigationItemByName } from '~/utils/navigation';
 
   ul {
     margin: 0;
-    display: flex;
+    display: none @(min-width: 900px) flex;
     gap: 20px;
     background-color: var(--color-secondary-100);
     padding: 16px;

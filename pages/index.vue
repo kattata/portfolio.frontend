@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { getNavigationItems } from '~/content/ts/navigation';
 import { NavigationItemEnum } from '~/types/navigation';
-import { getNavigationItemByName } from '~/utils/navigation';
+import { getNavigationItemById } from '~/utils/navigation';
 
 const route = useRoute();
 
@@ -32,22 +32,33 @@ const { data: experienceData } = await useLazyAsyncData('experience', () => quer
 
     <template v-if="aboutData">
       <div class="container container--small">
-        <section :id="getNavigationItemByName(NavigationItemEnum.About)?.id" class="section section--centered section-about">
+        <section :id="getNavigationItemById(NavigationItemEnum.About)?.id" class="section section--centered section-about">
           <div>
             <div class="section__heading">
-              <BaseHeading :text="getNavigationItemByName(NavigationItemEnum.About)?.name || ''" tag-hx="h2" style-hx="h1" />
+              <BaseHeading :text="getNavigationItemById(NavigationItemEnum.About)?.name || ''" tag-hx="h2" style-hx="h1" />
             </div>
-            <BaseMarkdownRenderer :content="aboutData" />
+            <div class="about">
+              <BaseMarkdownRenderer :content="aboutData" />
+            </div>
           </div>
         </section>
       </div>
     </template>
 
+    <div class="container container--small">
+      <section :id="getNavigationItemById(NavigationItemEnum.Tech)?.id" class="section section--centered">
+        <div>
+          <BaseHeading :text="getNavigationItemById(NavigationItemEnum.Tech)?.name || ''" tag-hx="h2" style-hx="h1" />
+          <SkillList />
+        </div>
+      </section>
+    </div>
+
     <template v-if="experienceData">
       <div class="container container--small">
-        <section :id="getNavigationItemByName(NavigationItemEnum.Experience)?.id" class="section section--centered section-experience">
+        <section :id="getNavigationItemById(NavigationItemEnum.Experience)?.id" class="section section--centered section-experience">
           <div>
-            <BaseHeading :text="getNavigationItemByName(NavigationItemEnum.Experience)?.name || ''" tag-hx="h2" style-hx="h1" />
+            <BaseHeading :text="getNavigationItemById(NavigationItemEnum.Experience)?.name || ''" tag-hx="h2" style-hx="h1" />
             <BaseMarkdownRenderer :content="experienceData" />
             <ExperienceCardList />
           </div>
@@ -56,10 +67,9 @@ const { data: experienceData } = await useLazyAsyncData('experience', () => quer
     </template>
 
     <div class="container container--small">
-      <section :id="getNavigationItemByName(NavigationItemEnum.Skills)?.id" class="section section--centered">
+      <section :id="getNavigationItemById(NavigationItemEnum.Contact)?.id" class="section section--centered section-experience">
         <div>
-          <BaseHeading :text="getNavigationItemByName(NavigationItemEnum.Skills)?.name || ''" tag-hx="h2" style-hx="h1" />
-          <SkillList />
+          <BaseHeading :text="getNavigationItemById(NavigationItemEnum.Contact)?.name || ''" tag-hx="h2" style-hx="h1" />
         </div>
       </section>
     </div>
@@ -88,6 +98,20 @@ const { data: experienceData } = await useLazyAsyncData('experience', () => quer
   &--centered {
     display: flex;
     align-items: center;
+  }
+
+  .about {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+
+    img {
+      width: 40%;
+      height: 100%;
+      object-fit: contain;
+      mix-blend-mode: darken;
+      filter: sepia(100%);
+    }
   }
 }
 </style>

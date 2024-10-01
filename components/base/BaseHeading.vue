@@ -23,7 +23,7 @@ const props = defineProps<Props>();
 
   .divider {
     z-index: -2;
-    width: 100vw;
+    width: calc(100vw - 35px) @(min-width: 900px) 100vw;
     position: absolute;
     left: unset @(min-width: 900px) calc(((100vw - var(--container-width-s)) / 2) * -1);
     top: 50%;

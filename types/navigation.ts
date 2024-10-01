@@ -1,8 +1,9 @@
 export enum NavigationItemEnum {
-  Home = 'Home',
-  About = 'About',
-  Experience = 'Experience',
-  Skills = 'Skills'
+  Home = 'home',
+  About = 'about',
+  Experience = 'experience',
+  Tech = 'tech',
+  Contact = 'contact'
 }
 
 export interface NavigationType {

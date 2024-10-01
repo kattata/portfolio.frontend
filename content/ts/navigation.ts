@@ -17,9 +17,14 @@ export function getNavigationItems() {
       url: '#experience'
     },
     {
-      id: 'skills',
-      name: 'Skills',
-      url: '#skills'
+      id: 'tech',
+      name: 'Technologies',
+      url: '#tech'
+    },
+    {
+      id: 'contact',
+      name: 'Contact',
+      url: '#contact'
     }
   ];
 }
