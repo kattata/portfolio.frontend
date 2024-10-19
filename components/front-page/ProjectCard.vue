@@ -15,7 +15,7 @@ const props = defineProps<Props>();
     </div>
     <BaseLink :to="props.to" class="project-card-content">
       <template v-if="props.image">
-        <BaseImage :src="props.image" />
+        <BaseImage :src="props.image" height="700px" />
       </template>
       <template v-else>
         <div class="project-card-image-placeholder"></div>

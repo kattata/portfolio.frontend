@@ -57,6 +57,13 @@ onMounted(() => {
   width: var(--business-card-width);
   transition: all 0.0001s ease-in-out;
   cursor: pointer;
+  animation: bounce 2s ease infinite paused 0.5s;
+
+  @media (min-width: 900px) {
+    &:hover {
+      animation-play-state: running;
+    }
+  }
 }
 
 .business-card-content {
@@ -108,6 +115,34 @@ onMounted(() => {
 
   .h1 {
     margin: 0;
+    font-size: 20px @(min-width: 900px) var(--h1-font-size);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+
+  35% {
+    transform: scale(1.01);
+  }
+
+  40%,
+  60% {
+    transform: rotate(-1.5deg) scale(1.01);
+  }
+
+  50% {
+    transform: rotate(1.5deg) scale(1.01);
+  }
+
+  90% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1);
   }
 }
 </style>
