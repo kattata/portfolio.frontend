@@ -57,6 +57,12 @@ const props = defineProps<Props>();
     }
   }
 
+  &:first-of-type {
+    .experience-preview-inner {
+      padding-top: 0;
+    }
+  }
+
   &-column {
     &--right {
       text-align: start @(min-width: 900px) end;

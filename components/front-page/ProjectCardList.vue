@@ -3,7 +3,15 @@ import type { SwiperOptions } from 'swiper/types';
 import data from '~/content/projects.json';
 
 const swiperOptions: SwiperOptions = {
-  slidesPerView: 2
+  slidesPerView: 2,
+  breakpoints: {
+    200: {
+      slidesPerView: 1
+    },
+    900: {
+      slidesPerView: 2
+    }
+  }
 };
 </script>
 
@@ -35,7 +43,7 @@ swiper-container {
 
 swiper-slide {
   width: fit-content !important;
-  padding-block: 32px;
+  padding-bottom: 32px;
   padding-inline: 16px;
 }
 </style>

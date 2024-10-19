@@ -26,7 +26,7 @@ const props = defineProps<Props>();
 
 <style lang="postcss" scoped>
 .project-card-name {
-  opacity: 0;
+  opacity: 1 @(min-width: 900px) 0;
   transition: opacity 0.3s ease-in-out;
   padding-bottom: 12px;
 }
@@ -35,8 +35,8 @@ const props = defineProps<Props>();
   border: 1px solid var(--color-line);
   overflow: hidden;
   box-shadow: var(--shadow-soft);
-  height: 500px;
-  width: 500px;
+  width: 300px @(min-width: 900px) 500px;
+  aspect-ratio: 1/1;
   border-radius: var(--border-radius-small);
   display: flex;
   align-items: center;

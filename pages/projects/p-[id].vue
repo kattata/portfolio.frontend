@@ -69,22 +69,25 @@ useHead({
 </template>
 
 <style lang="postcss" scoped>
+.project-page {
+  --base-spacing: 30px @(min-width: 900px) 50px;
+}
+
 .section-hero-wrapper {
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: var(--base-spacing);
+  margin-bottom: 0 @(min-width: 900px) var(--base-spacing);
 }
 
 .section-hero {
   display: grid;
-  grid-template-columns: 60% 40%;
-  gap: 32px;
+  grid-template-columns: 1fr @(min-width: 900px) 60% 40%;
+  gap: 12px @(min-width: 900px) 32px;
 
   img {
     border: 1px solid var(--color-line);
     width: 100%;
     height: 100%;
     object-fit: cover;
-    margin-top: -1px;
     border-radius: var(--border-radius-small);
     box-shadow: var(--shadow-soft);
   }
@@ -93,7 +96,7 @@ useHead({
     width: 100%;
 
     &--right {
-      padding-block: 50px;
+      padding-block: var(--base-spacing);
     }
   }
 
@@ -102,7 +105,7 @@ useHead({
   }
 
   &-intro {
-    padding-bottom: 50px;
+    padding-bottom: var(--base-spacing);
   }
 
   &-tech-stack {
@@ -118,7 +121,8 @@ useHead({
   &-links {
     display: flex;
     gap: 24px;
-    padding-block: 50px;
+    padding-top: var(--base-spacing);
+    padding-bottom: 0 @(min-width: 900px) var(--base-spacing);
   }
 
   &-link {
@@ -144,12 +148,12 @@ useHead({
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
-  padding-top: 50px;
+  padding-top: var(--base-spacing);
   padding-bottom: 100px;
 
   img {
-    width: 300px;
-    height: 300px;
+    width: 100% @(min-width: 900px) 300px;
+    aspect-ratio: 1/1;
     object-fit: cover;
     border-radius: var(--border-radius-small);
     border: 1px solid var(--color-line);
