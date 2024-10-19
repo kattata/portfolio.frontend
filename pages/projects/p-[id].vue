@@ -54,6 +54,16 @@ useHead({
           </section>
         </div>
       </div>
+
+      <section v-if="item.images.length" class="section-gallery">
+        <div class="container">
+          <div class="section-gallery-images">
+            <template v-for="image in item.images" :key="`gallery-image__${image.url}`">
+              <BaseImage width="500px" :src="image.url" />
+            </template>
+          </div>
+        </div>
+      </section>
     </main>
   </div>
 </template>
@@ -61,7 +71,7 @@ useHead({
 <style lang="postcss" scoped>
 .section-hero-wrapper {
   margin-top: 50px;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 
 .section-hero {
@@ -76,6 +86,7 @@ useHead({
     object-fit: cover;
     margin-top: -1px;
     border-radius: var(--border-radius-small);
+    box-shadow: var(--shadow-soft);
   }
 
   &-column {
@@ -126,6 +137,23 @@ useHead({
     width: 100vw;
     left: 0;
     z-index: -1;
+  }
+}
+
+.section-gallery-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding-top: 50px;
+  padding-bottom: 100px;
+
+  img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: var(--border-radius-small);
+    border: 1px solid var(--color-line);
+    box-shadow: var(--shadow-soft);
   }
 }
 </style>
