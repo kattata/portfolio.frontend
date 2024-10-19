@@ -16,7 +16,7 @@ const props = defineProps<Props>();
 <style lang="postcss" scoped>
 a {
   border: 1px solid var(--color-line);
-  border-radius: 30px;
+  border-radius: var(--border-radius-large);
   padding: 24px;
   height: 50px;
   width: fit-content;

@@ -27,6 +27,8 @@
     <div class="container">
       <section class="section-projects">
         <h2>student & side projects</h2>
+
+        <ProjectCardList />
       </section>
     </div>
 
@@ -42,12 +44,12 @@
     <div class="container">
       <section class="section-contact">
         <div class="h2">get in touch!</div>
+        <p>If you’re interested in my work, don’t hesitate to contact me through one of the channels below.</p>
 
         <div class="section-contact-links">
           <BaseContactButton to="mailto:kasia.laniecka@gmail.com" text="email" />
           <BaseContactButton to="https://www.linkedin.com/in/kasialaniecka" text="linkedin" />
           <BaseContactButton to="https://github.com/kattata" text="github" />
-          <BaseContactButton to="/" text="resume" />
         </div>
       </section>
     </div>
@@ -79,11 +81,11 @@ section {
 }
 
 .section-projects {
-  height: 50vh;
 }
 
 .section-contact {
   &-links {
+    margin-top: 24px;
     display: flex;
     gap: 16px;
   }

@@ -28,7 +28,8 @@
   --h5-font-size: 24px;
 
   /* Border */
-  --border-radius-default: 8px;
+  --border-radius-small: 12px;
+  --border-radius-large: 24px;
 
   /* Spacing */
   --container-width-s: 1000px;
