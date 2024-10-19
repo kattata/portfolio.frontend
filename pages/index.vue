@@ -2,7 +2,11 @@
 
 <template>
   <main>
-    <section class="section-hero"></section>
+    <div class="container">
+      <section class="section-hero">
+        <BusinessCard />
+      </section>
+    </div>
 
     <div class="container">
       <section class="section-description">
@@ -62,7 +66,11 @@ section {
 }
 
 .section-hero {
-  height: 60vh;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
 }
 
 .section-description {
