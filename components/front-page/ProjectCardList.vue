@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import type { SwiperOptions } from 'swiper/types';
+import data from '~/content/projects.json';
 
 const swiperOptions: SwiperOptions = {
   slidesPerView: 2,
@@ -11,9 +12,9 @@ const swiperOptions: SwiperOptions = {
   <div class="project-card-list">
     <ClientOnly>
       <swiper-container v-bind="swiperOptions">
-        <template v-for="i in 5" :key="`project-card__${i}`">
+        <template v-for="project in data.projects" :key="`project-card__${project.name}`">
           <swiper-slide>
-            <ProjectCard to="/sunset-today" :image="undefined" name="Sunset Today" />
+            <ProjectCard :to="`/projects/p-${project.id}`" :image="project.primaryImage" :name="project.title" />
           </swiper-slide>
         </template>
       </swiper-container>
