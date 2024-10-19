@@ -34,5 +34,6 @@
 
   /* Spacing */
   --container-width-s: 1000px;
-  --container-width-m: 1200px;
+  --container-width-m: 1400px;
+  --container-padding: 16px;
 }

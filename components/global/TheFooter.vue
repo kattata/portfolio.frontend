@@ -2,12 +2,14 @@
 
 <template>
   <footer>
-    <div>Designed and developed by Kasia Laniecka</div>
+    <div class="container">
+      <div>Designed and developed by Kasia Laniecka</div>
+    </div>
   </footer>
 </template>
 
 <style lang="postcss" scoped>
 footer {
-  padding: 40px;
+  padding-block: 40px;
 }
 </style>

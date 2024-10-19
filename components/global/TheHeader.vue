@@ -32,7 +32,7 @@ header {
   ul {
     margin: 0;
     display: flex;
-    gap: 16px;
+    gap: 32px;
 
     li {
       list-style-type: none;

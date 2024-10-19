@@ -2,28 +2,37 @@
 
 <template>
   <div class="experience-preview">
-    <div>
-      <h3>Frontend Developer at Novicell</h3>
-      <p>
-        Building large-scale B2B and B2C e-commerce platforms. Working with Vue, Nuxt, TypeScript, HTML and CSS.Refining and estimating
-        stories, code reviews, debugging. Collaboration with backend developers, designers and testers. Working in a SCRUM environment
-      </p>
+    <div class="experience-preview-inner">
+      <div>
+        <h3>Frontend Developer at Novicell</h3>
+        <p>
+          Building large-scale B2B and B2C e-commerce platforms. Working with Vue, Nuxt, TypeScript, HTML and CSS.Refining and estimating
+          stories, code reviews, debugging. Collaboration with backend developers, designers and testers. Working in a SCRUM environment
+        </p>
+      </div>
+      <div class="experience-preview-column experience-preview-column--right">2022 - present</div>
     </div>
-    <div class="experience-preview-column experience-preview-column--right">2022 - present</div>
   </div>
 </template>
 
 <style lang="postcss" scoped>
 .experience-preview {
-  padding-block: 40px;
-  display: grid;
-  grid-template-columns: 1fr 300px;
-  gap: 40px;
-  border-bottom: 1px solid var(--color-line);
+  display: flex;
+  justify-content: center;
+
+  &-inner {
+    padding-block: 40px;
+    padding-inline: var(--container-padding) @(min-width: 900px) 0;
+    display: grid;
+    grid-template-columns: 1fr @(min-width: 900px) 1fr 300px;
+    gap: 40px;
+    border-bottom: 1px solid var(--color-line);
+    max-width: calc(var(--container-width-m) - (2 * var(--container-padding)));
+  }
 
   &-column {
     &--right {
-      text-align: end;
+      text-align: start @(min-width: 900px) end;
     }
   }
 }
