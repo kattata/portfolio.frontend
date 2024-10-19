@@ -68,15 +68,13 @@ useHead({
     </div>
 
     <div id="experience" class="section-wrapper">
-      <section class="section-experience">
-        <div class="container">
+      <div class="container">
+        <section class="section-experience">
           <h2>work experience</h2>
-        </div>
 
-        <template v-for="i in 3" :key="`experience-preview__${i}`">
-          <ExperiencePreview />
-        </template>
-      </section>
+          <ExperiencePreviewList />
+        </section>
+      </div>
     </div>
 
     <div id="contact" class="section-wrapper section-wrapper--no-margin-bottom section-wrapper--no-border">
@@ -86,9 +84,18 @@ useHead({
           <p>If you’re interested in my work, don’t hesitate to contact me through one of the channels below.</p>
 
           <div class="section-contact-links">
-            <BaseLabel to="mailto:kasia.laniecka@gmail.com" text="email" size="large" />
-            <BaseLabel to="https://www.linkedin.com/in/kasialaniecka" text="linkedin" size="large" />
-            <BaseLabel to="https://github.com/kattata" text="github" size="large" />
+            <div class="section-contact-link">
+              <BaseIcon name="external-link" />
+              <BaseLink to="mailto:kasia.laniecka@gmail.com"> Email </BaseLink>
+            </div>
+            <div class="section-contact-link">
+              <BaseIcon name="external-link" />
+              <BaseLink to="https://www.linkedin.com/in/kasialaniecka"> LinkedIn </BaseLink>
+            </div>
+            <div class="section-contact-link">
+              <BaseIcon name="external-link" />
+              <BaseLink to="https://github.com/kattata"> Github </BaseLink>
+            </div>
           </div>
         </div>
       </section>
@@ -143,7 +150,7 @@ useHead({
 
   &-tech {
     display: flex;
-    gap: 16px;
+    gap: 10px;
     flex-wrap: wrap;
     width: 100% @(min-width: 900px) 70%;
 
@@ -153,14 +160,22 @@ useHead({
   }
 }
 
-.section-projects {
-}
-
 .section-contact {
   &-links {
-    margin-top: 24px;
+    margin-top: 32px;
     display: flex;
-    gap: 16px;
+    gap: 24px;
+  }
+
+  &-link {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    :deep(.icon) {
+      font-size: 24px;
+      margin-bottom: 2px;
+    }
   }
 }
 </style>

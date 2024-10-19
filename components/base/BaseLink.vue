@@ -21,10 +21,11 @@ const props = withDefaults(
 a {
   color: var(--color-text);
   text-decoration: none;
-  transition: all 0.2s ease-in-out;
+  font-size: var(--font-size-m);
+  transition: color 0.3s ease-in-out;
 
   &:hover {
-    color: var(--color-red-100);
+    color: var(--color-light-black);
   }
 }
 </style>

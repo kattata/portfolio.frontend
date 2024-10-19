@@ -3,27 +3,27 @@ import data from '~/content/projects.json';
 
 const id = useRoute().params.id;
 
-const project = data.projects.find(project => project.id === id);
+const item = data.projects.find(project => project.id === id);
 
 useHead({
-  title: () => `${project?.title} | Kasia Laniecka`
+  title: () => `${item?.title} | Kasia Laniecka`
 });
 </script>
 
 <template>
   <div class="project-page">
-    <main v-if="project">
+    <main v-if="item">
       <div class="section-hero-wrapper">
         <div class="container">
           <section class="section-hero">
             <div class="section-hero-column section-hero-column--left">
-              <BaseImage :src="project?.primaryImage.url" />
+              <BaseImage :src="item?.primaryImage.url" />
             </div>
             <div class="section-hero-column section-hero-column--right">
-              <div class="section-hero-meta">{{ capitalize(project.type) }} project, {{ project.yearCreated }}</div>
+              <div class="section-hero-meta">{{ capitalize(item.type) }} project, {{ item.yearCreated }}</div>
               <div class="section-hero-intro">
-                <h1>{{ project.title }}</h1>
-                <p>{{ project.description }}</p>
+                <h1>{{ item.title }}</h1>
+                <p>{{ item.description }}</p>
               </div>
 
               <div class="divider divider--horizontal"></div>
@@ -32,7 +32,7 @@ useHead({
                 <h2>tech stack</h2>
 
                 <div class="section-hero-tech-stack-list">
-                  <template v-for="item in project.stack" :key="`tech-stack-item__${item}`">
+                  <template v-for="item in item.stack" :key="`tech-stack-item__${item}`">
                     <BaseLabel :text="item" size="large" />
                   </template>
                 </div>
@@ -41,8 +41,14 @@ useHead({
               <div class="divider divider--horizontal"></div>
 
               <div class="section-hero-links">
-                <BaseLink v-if="project.repo?.url" :to="project.repo?.url" target="_blank"> Check out the code </BaseLink>
-                <BaseLink v-if="project.demo?.url" :to="project.demo?.url" target="_blank"> Visit the website </BaseLink>
+                <div v-if="item.repo?.url" class="section-hero-link">
+                  <BaseIcon name="external-link" />
+                  <BaseLink :to="item.repo?.url" target="_blank"> Check out the code </BaseLink>
+                </div>
+                <div v-if="item.demo?.url" class="section-hero-link">
+                  <BaseIcon name="external-link" />
+                  <BaseLink :to="item.demo?.url" target="_blank"> Visit the website </BaseLink>
+                </div>
               </div>
             </div>
           </section>
@@ -94,14 +100,25 @@ useHead({
     &-list {
       flex-wrap: wrap;
       display: flex;
-      gap: 16px;
+      gap: 10px;
     }
   }
 
   &-links {
     display: flex;
-    gap: 16px;
+    gap: 24px;
     padding-block: 50px;
+  }
+
+  &-link {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    :deep(.icon) {
+      font-size: 24px;
+      margin-bottom: 2px;
+    }
   }
 
   .divider {

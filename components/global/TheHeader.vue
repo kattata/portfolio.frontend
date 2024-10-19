@@ -8,16 +8,16 @@
 
       <ul class="navigation-items-desktop">
         <li>
-          <BaseLink to="#about"> about </BaseLink>
+          <BaseLink to="/#about"> about </BaseLink>
         </li>
         <li>
-          <BaseLink to="#projects"> projects </BaseLink>
+          <BaseLink to="/#projects"> projects </BaseLink>
         </li>
         <li>
-          <BaseLink to="#experience"> experience </BaseLink>
+          <BaseLink to="/#experience"> experience </BaseLink>
         </li>
         <li>
-          <BaseLink to="#contact"> contact </BaseLink>
+          <BaseLink to="/#contact"> contact </BaseLink>
         </li>
       </ul>
 

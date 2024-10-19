@@ -19,7 +19,3 @@ body {
   font-family: var(--font-family-base-primary);
   font-size: var(--font-size-m);
 }
-
-a {
-  font-size: var(--font-size-m);
-}
