@@ -21,13 +21,20 @@
   justify-content: center;
 
   &-inner {
+    border-bottom: 1px solid var(--color-line);
     padding-block: 40px;
-    padding-inline: var(--container-padding) @(min-width: 900px) 0;
+    padding-inline: var(--container-padding) @(min-width: 1400px) 0;
     display: grid;
     grid-template-columns: 1fr @(min-width: 900px) 1fr 300px;
     gap: 40px;
-    border-bottom: 1px solid var(--color-line);
     max-width: calc(var(--container-width-m) - (2 * var(--container-padding)));
+  }
+
+  &:last-of-type {
+    .experience-preview-inner {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
   }
 
   &-column {

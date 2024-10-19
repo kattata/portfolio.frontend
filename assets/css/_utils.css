@@ -13,13 +13,13 @@
   -moz-osx-font-smoothing: inherit;
 
   &[disabled] {
-    color: var(--color-primary-10);
+    color: var(--color-text);
     cursor: not-allowed;
   }
 }
 
 .divider {
-  background-color: var(--color-primary-10);
+  background-color: var(--color-line);
 
   &--vertical {
     margin: auto;
