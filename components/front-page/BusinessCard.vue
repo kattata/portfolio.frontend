@@ -92,6 +92,8 @@ onMounted(() => {
   padding: 24px;
   display: flex;
   align-items: flex-end;
+  border: 1px solid var(--color-line);
+  border-radius: var(--border-radius-small);
 }
 
 .business-card-back {

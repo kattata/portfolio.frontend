@@ -7,7 +7,7 @@
   --color-background: #f3f3f3;
 
   /* Shadows */
-  --shadow-soft: 0 0 24px rgb(0 0 0 / 5%);
+  --shadow-soft: 10px 10px 24px rgb(0 0 0 / 5%);
   --shadow-default: 10px 10px 60px rgb(0 0 0 / 40%);
 
   /* Skeleton */

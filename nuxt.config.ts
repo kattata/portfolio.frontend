@@ -21,14 +21,6 @@ export default defineNuxtConfig({
 
   modules: ['nuxt-icons', '@nuxt/image', '@nuxtjs/i18n'],
 
-  image: {
-    dir: 'assets/images'
-  },
-
-  sanity: {
-    projectId: 'gsemtvsw'
-  },
-
   vue: {
     compilerOptions: {
       isCustomElement: (tag: string) => ['swiper-container', 'swiper-slide'].includes(tag)

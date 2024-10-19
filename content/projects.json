@@ -3,7 +3,92 @@
     {
       "title": "Sunset Today",
       "id": "sunset-today",
-      "primaryImage": ""
+      "description": "An application that I designed and developed to get better at React. Everybody loves a beautiful sunset, it would be a shame to miss the chance to see it. With this website not only can you check how much time is left until the sunset in your city, but also in any place in the world.",
+      "primaryImage": {
+        "url": "/images/projects/sunset-today/sunset-today.png",
+        "alt": ""
+      },
+      "images": [
+        {
+          "url": "/images/projects/sunset-today/sunset1.png",
+          "alt": "Sunset Today Home Page"
+        },
+        {
+          "url": "/images/projects/sunset-today/sunset2.png",
+          "alt": "Sunset Today Result Page"
+        }
+      ],
+      "stack": ["React", "JavaScript", "HTML", "CSS/SASS"],
+      "repo": {
+        "url": "https://github.com/kattata/sunset-today-v2"
+      },
+      "demo": {
+        "url": "https://sunset-today.netlify.app/"
+      },
+      "type": "personal",
+      "yearCreated": "2021"
+    },
+    {
+      "title": "ParkShare",
+      "id": "parkshare",
+      "description": "A thesis project, where I collaborated with my internship company to develop a prototype for their product using web technologies. ParkShare helps drivers find parking spots to rent posted by private owners which allow them to waste less time in traffic, reduce CO2 emissions and save money. My job was to prepare a proposition of a mobile app that could automate their tasks.",
+      "primaryImage": {
+        "url": "/images/projects/parkshare/parkshare-main.png",
+        "alt": ""
+      },
+      "images": [
+        {
+          "url": "/images/projects/parkshare/parkshare-details.png",
+          "alt": ""
+        },
+        {
+          "url": "/images/projects/parkshare/parkshare-booking.png",
+          "alt": ""
+        },
+        {
+          "url": "/images/projects/parkshare/parkshare-map.png",
+          "alt": ""
+        }
+      ],
+      "type": "student",
+      "yearCreated": "2021",
+      "stack": ["HTML", "CSS", "JavaScript", "React", "SASS", "Firebase"],
+      "repo": {
+        "url": "https://github.com/kattata/parkshare-mobile-app"
+      }
+    },
+    {
+      "title": "Left Over",
+      "id": "left-over",
+      "description": "A study project focused on improving our full stack development skills. Our concept was to give people an opportunity to share their left over food with others in order to reduce food waste as well as educate them on how to change their habits.",
+      "primaryImage": {
+        "url": "/images/projects/left-over/leftover-main.png",
+        "alt": ""
+      },
+      "images": [
+        {
+          "url": "/images/projects/left-over/leftover-sell.png",
+          "alt": ""
+        },
+        {
+          "url": "/images/projects/left-over/leftover-browse.png",
+          "alt": ""
+        },
+        {
+          "url": "/images/projects/left-over/leftover-log.png",
+          "alt": ""
+        },
+        {
+          "url": "/images/projects/left-over/leftover-home1.png",
+          "alt": ""
+        }
+      ],
+      "stack": ["HTML", "CSS/SASS", "JavaScript", "PHP", "MySQL", "Tailwind"],
+      "type": "student",
+      "yearCreated": "2021",
+      "repo": {
+        "url": "https://github.com/kattata/left-over"
+      }
     }
   ]
 }

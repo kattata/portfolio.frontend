@@ -10,6 +10,7 @@
 
 <style lang="postcss" scoped>
 footer {
+  border-top: 1px solid var(--color-line);
   padding-block: 40px;
 }
 </style>

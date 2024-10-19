@@ -1,4 +1,8 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+useHead({
+  title: 'Kasia Laniecka'
+});
+</script>
 
 <template>
   <main>
@@ -75,7 +79,7 @@
       </section>
     </div>
 
-    <div id="contact" class="section-wrapper section-wrapper--no-margin-bottom">
+    <div id="contact" class="section-wrapper section-wrapper--no-margin-bottom section-wrapper--no-border">
       <section class="section-contact">
         <div class="container">
           <div class="h2">get in touch!</div>
@@ -142,6 +146,10 @@
     gap: 16px;
     flex-wrap: wrap;
     width: 100% @(min-width: 900px) 70%;
+
+    :deep(.label) {
+      min-width: 70px;
+    }
   }
 }
 

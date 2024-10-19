@@ -31,19 +31,30 @@ const props = defineProps<Props>();
   padding-bottom: 12px;
 }
 
+.project-card-content {
+  border: 1px solid var(--color-line);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  height: 500px;
+  width: 500px;
+  border-radius: var(--border-radius-small);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: brightness(90%);
+  transition: filter 0.3s ease-in-out;
+}
+
 .project-card {
   &:hover {
     .project-card-name {
       opacity: 1;
     }
-  }
-}
 
-.project-card-content {
-  display: block;
-  height: 500px;
-  width: 500px;
-  border-radius: var(--border-radius-small);
+    .project-card-content {
+      filter: brightness(100%);
+    }
+  }
 }
 
 .project-card-image-placeholder {
