@@ -4,26 +4,26 @@
   <div class="container container--no-padding">
     <header>
       <div class="divider divider--horizontal"></div>
-      <BaseLink to="/"> K/L </BaseLink>
+      <BaseLink to="/">KL</BaseLink>
 
       <ul class="navigation-items-desktop">
         <li>
-          <BaseLink to="/#about"> about </BaseLink>
+          <BaseLink to="/#about">about</BaseLink>
         </li>
         <li>
-          <BaseLink to="/#projects"> projects </BaseLink>
+          <BaseLink to="/#projects">projects</BaseLink>
         </li>
         <li>
-          <BaseLink to="/#experience"> experience </BaseLink>
+          <BaseLink to="/#experience">experience</BaseLink>
         </li>
         <li>
-          <BaseLink to="/#contact"> contact </BaseLink>
+          <BaseLink to="/#contact">contact</BaseLink>
         </li>
       </ul>
 
       <ul class="navigation-items-mobile">
         <li>
-          <BaseLink to="#contact"> get in touch! </BaseLink>
+          <BaseLink to="#contact">get in touch!</BaseLink>
         </li>
       </ul>
     </header>

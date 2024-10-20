@@ -32,14 +32,21 @@ onMounted(() => {
     <div class="business-card-content">
       <div class="business-card-content-inner" :class="{ 'business-card-content-inner--back-side': !isFrontSide }">
         <div class="business-card-front">
-          <div class="business-card-footer">
+          <div class="business-card-front-footer">
             <div class="h1">Kasia Laniecka</div>
-            <div>Frontend Developer</div>
+            <div class="business-card-front-footer-title">Frontend Developer</div>
           </div>
         </div>
 
         <div class="business-card-back">
-          <div class="business-card-footer">Info</div>
+          <div class="business-card-back-footer">
+            <BaseIcon name="logo" />
+            <div class="business-card-back-footer-details">
+              <div>Kasia Laniecka</div>
+              <div>kasia.laniecka@gmail.com</div>
+              <div>+45 50 34 93 98</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -107,7 +114,7 @@ onMounted(() => {
   transform: rotateY(180deg);
 }
 
-.business-card-footer {
+.business-card-front-footer {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
@@ -116,6 +123,49 @@ onMounted(() => {
   .h1 {
     margin: 0;
     font-size: 20px @(min-width: 900px) var(--h1-font-size);
+  }
+
+  &-title {
+    text-align: end;
+  }
+}
+
+.business-card-back-footer {
+  display: flex;
+  gap: 12px;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 100%;
+  font-size: var(--font-size-xs) @(min-width: 900px) var(--font-size-m);
+
+  &-details {
+    display: flex;
+    flex-direction: column;
+    gap: 6px @(min-width: 900px) 12px;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+
+  :deep(.icon) {
+    height: 30px;
+    width: 70px;
+
+    svg {
+      height: 30px;
+      width: 70px;
+    }
+
+    @media (min-width: 900px) {
+      :deep(.icon) {
+        height: 50px;
+        width: 100px;
+
+        svg {
+          height: 50px;
+          width: 100px;
+        }
+      }
+    }
   }
 }
 
