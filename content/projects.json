@@ -1,9 +1,37 @@
 {
   "projects": [
     {
+      "title": "Playlist Blend",
+      "id": "playlist-blend",
+      "description": "A web application which allows you to find songs you and your friends love and create blends of playlists. It's based on Spotify's Web API and OIDC authentication required to fetch private user data.",
+      "primaryImage": {
+        "url": "/images/projects/playlist-blend/playlist-blend-primary.png",
+        "alt": ""
+      },
+      "images": [
+        {
+          "url": "/images/projects/playlist-blend/playlist-blend-2.png",
+          "alt": ""
+        },
+        {
+          "url": "/images/projects/playlist-blend/playlist-blend-3.png",
+          "alt": ""
+        }
+      ],
+      "stack": ["HTML", "CSS", "JavaScript", "Vue/Nuxt", "OIDC"],
+      "repo": {
+        "url": "https://github.com/kattata/spotify-playlist-blend"
+      },
+      "demo": {
+        "url": "https://spotify-playlist-blend-beta.vercel.app/"
+      },
+      "type": "personal",
+      "yearCreated": "2024"
+    },
+    {
       "title": "Sunset Today",
       "id": "sunset-today",
-      "description": "An application that I designed and developed to get better at React. Everybody loves a beautiful sunset, it would be a shame to miss the chance to see it. With this website not only can you check how much time is left until the sunset in your city, but also in any place in the world.",
+      "description": "Watching a beautiful sunset brings us relief and rest after a long day. I created this web application, which counts down until sunset, to ensure you won't miss it. The idea behind it was to practice working with React, external APIs and dates in JavaScript.",
       "primaryImage": {
         "url": "/images/projects/sunset-today/sunset-today.png",
         "alt": ""
@@ -22,16 +50,13 @@
       "repo": {
         "url": "https://github.com/kattata/sunset-today-v2"
       },
-      "demo": {
-        "url": "https://sunset-today.netlify.app/"
-      },
       "type": "personal",
       "yearCreated": "2021"
     },
     {
       "title": "ParkShare",
       "id": "parkshare",
-      "description": "A thesis project, where I collaborated with my internship company to develop a prototype for their product using web technologies. ParkShare helps drivers find parking spots to rent posted by private owners which allow them to waste less time in traffic, reduce CO2 emissions and save money. My job was to prepare a proposition of a mobile app that could automate their tasks.",
+      "description": "An AP degree thesis project, for which I collaborated with my internship company to develop a prototype for their product. ParkShare helps drivers find parking spots to rent and therefore waste less time in traffic, reduce CO2 emissions and save money. My objective was to prepare a proposition of a mobile application that could automate their tasks.",
       "primaryImage": {
         "url": "/images/projects/parkshare/parkshare-main.png",
         "alt": ""
@@ -60,7 +85,7 @@
     {
       "title": "Left Over",
       "id": "left-over",
-      "description": "A study project focused on improving our full stack development skills. Our concept was to give people an opportunity to share their left over food with others in order to reduce food waste as well as educate them on how to change their habits.",
+      "description": "A study project focused on improving our full stack development skills. My group's concept was to give people an opportunity to share their left over food with others in order to reduce food waste as well as educate them on how to change their habits.",
       "primaryImage": {
         "url": "/images/projects/left-over/leftover-main.png",
         "alt": ""

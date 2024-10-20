@@ -87,15 +87,15 @@ useHead({
             <div class="section-contact-links">
               <div class="section-contact-link">
                 <BaseIcon name="external-link" />
-                <BaseLink to="mailto:kasia.laniecka@gmail.com"> Email </BaseLink>
+                <BaseLink to="mailto:kasia.laniecka@gmail.com">Email</BaseLink>
               </div>
               <div class="section-contact-link">
                 <BaseIcon name="external-link" />
-                <BaseLink to="https://www.linkedin.com/in/kasialaniecka"> LinkedIn </BaseLink>
+                <BaseLink to="https://www.linkedin.com/in/kasialaniecka" target="_blank">LinkedIn</BaseLink>
               </div>
               <div class="section-contact-link">
                 <BaseIcon name="external-link" />
-                <BaseLink to="https://github.com/kattata"> Github </BaseLink>
+                <BaseLink to="https://github.com/kattata" target="_blank">Github</BaseLink>
               </div>
             </div>
           </div>
