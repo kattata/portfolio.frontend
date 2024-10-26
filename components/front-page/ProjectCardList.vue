@@ -3,10 +3,9 @@ import type { SwiperOptions } from 'swiper/types';
 import data from '~/content/projects.json';
 
 const swiperOptions: SwiperOptions = {
-  slidesPerView: 2,
   breakpoints: {
     200: {
-      slidesPerView: 1
+      slidesPerView: 'auto'
     },
     900: {
       slidesPerView: 2
