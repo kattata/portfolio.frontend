@@ -3,6 +3,7 @@ import type { ImageModifiers } from '@nuxt/image';
 
 const props = defineProps<{
   src: string;
+  width?: string;
 }>();
 
 const defaultProps: Partial<ImageModifiers> = {
@@ -11,5 +12,5 @@ const defaultProps: Partial<ImageModifiers> = {
 </script>
 
 <template>
-  <NuxtImg :src="props.src" v-bind="{ ...defaultProps, ...$attrs }" />
+  <NuxtImg :src="props.src" v-bind="{ ...defaultProps, ...props }" />
 </template>
