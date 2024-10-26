@@ -50,6 +50,7 @@ header {
   a {
     background-color: var(--color-background);
     padding-inline: 16px;
+    text-decoration: none;
   }
 
   .divider {
