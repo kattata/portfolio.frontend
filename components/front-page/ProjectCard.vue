@@ -45,6 +45,10 @@ const props = defineProps<Props>();
   justify-content: center;
   filter: brightness(90%);
   transition: filter 0.3s ease-in-out;
+
+  img {
+    object-fit: cover;
+  }
 }
 
 .project-card {
