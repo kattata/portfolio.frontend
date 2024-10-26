@@ -56,9 +56,9 @@ onMounted(() => {
 <style lang="postcss" scoped>
 .business-card {
   /* stylelint-disable-next-line value-keyword-case */
-  --business-card-height: v-bind(cardDimensions.height);
+  --business-card-height: v-bind(cardDimensions?.height);
   /* stylelint-disable-next-line value-keyword-case */
-  --business-card-width: v-bind(cardDimensions.width);
+  --business-card-width: v-bind(cardDimensions?.width);
 
   height: var(--business-card-height);
   width: var(--business-card-width);

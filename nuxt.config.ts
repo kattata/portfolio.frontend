@@ -19,29 +19,11 @@ export default defineNuxtConfig({
     { path: '~/components/global' }
   ],
 
-  modules: ['nuxt-icons', '@nuxt/image', '@nuxtjs/i18n'],
+  modules: ['nuxt-icons', '@nuxt/image'],
 
   vue: {
     compilerOptions: {
       isCustomElement: (tag: string) => ['swiper-container', 'swiper-slide'].includes(tag)
     }
-  },
-
-  i18n: {
-    compilation: {
-      strictMessage: false
-    },
-    locales: [
-      {
-        name: 'English',
-        code: 'en',
-        file: 'en.yaml',
-        iso: 'en',
-        dir: 'ltr'
-      }
-    ],
-    lazy: true,
-    langDir: './locales',
-    defaultLocale: 'en'
   }
 });
