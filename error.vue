@@ -12,7 +12,7 @@ const props = defineProps<Props>();
   <NuxtLayout name="default">
     <div class="error">
       <div class="container">
-        <h1>{{ props.error?.statusCode === 404 ? '404 Page not found' : 'Error' }}</h1>
+        <h1>{{ props.error?.message }}</h1>
         <p>An error has occured.</p>
         <BaseLink to="/">Go to home</BaseLink>
       </div>

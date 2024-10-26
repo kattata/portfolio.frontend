@@ -5,6 +5,10 @@ const id = useRoute().params.id;
 
 const item = data.projects.find(project => project.id === id);
 
+if (!item) {
+  throw createError({ statusCode: 404, statusMessage: 'Project Not Found' });
+}
+
 useHead({
   title: () => `${item?.title} | Kasia Laniecka`
 });
