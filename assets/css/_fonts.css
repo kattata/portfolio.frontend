@@ -3,4 +3,5 @@
   font-family: Inter;
   font-style: normal;
   src: url('../fonts/Inter-Variable.ttf');
+  font-display: fallback;
 }

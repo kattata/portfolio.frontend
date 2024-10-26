@@ -16,7 +16,7 @@
   --color-skeleton-dark: var(--color-primary-10);
 
   /* Typography */
-  --font-family-base-primary: 'Inter';
+  --font-family-base-primary: 'Inter', sans-serif;
   --line-height-base: 1.2;
   --font-size-xxs: 10px;
   --font-size-xs: 12px;
