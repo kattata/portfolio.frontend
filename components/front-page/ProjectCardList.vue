@@ -21,7 +21,7 @@ const swiperOptions: SwiperOptions = {
       <swiper-container v-bind="swiperOptions">
         <template v-for="project in data.projects" :key="`project-card__${project.name}`">
           <swiper-slide>
-            <ProjectCard :to="`/projects/p-${project.id}`" :image="project.primaryImage.url" :name="project.title" />
+            <ProjectCard :to="`/projects/p-${project.id}`" :image="project.primaryImage" :name="project.title" />
           </swiper-slide>
         </template>
       </swiper-container>

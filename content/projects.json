@@ -6,16 +6,16 @@
       "description": "A web application which allows you to find songs you and your friends love and create blends of playlists. It's based on Spotify's Web API and OIDC authentication required to fetch private user data.",
       "primaryImage": {
         "url": "/images/projects/playlist-blend/playlist-blend-primary.png",
-        "alt": ""
+        "alt": "Spotify Playlist Blend - main image, visualization"
       },
       "images": [
         {
           "url": "/images/projects/playlist-blend/playlist-blend-2.png",
-          "alt": ""
+          "alt": "Spotify Playlist Blend - playlist selection page"
         },
         {
           "url": "/images/projects/playlist-blend/playlist-blend-3.png",
-          "alt": ""
+          "alt": "Spotify Playlist Blend - playlist blend page"
         }
       ],
       "stack": ["HTML", "CSS", "JavaScript", "Vue/Nuxt", "OIDC"],
@@ -39,11 +39,11 @@
       "images": [
         {
           "url": "/images/projects/sunset-today/sunset1.png",
-          "alt": "Sunset Today Home Page"
+          "alt": "Sunset Today - home page"
         },
         {
           "url": "/images/projects/sunset-today/sunset2.png",
-          "alt": "Sunset Today Result Page"
+          "alt": "Sunset Today - result page"
         }
       ],
       "stack": ["React", "JavaScript", "HTML", "CSS/SASS"],
@@ -59,20 +59,20 @@
       "description": "An AP degree thesis project, for which I collaborated with my internship company to develop a prototype for their product. ParkShare helps drivers find parking spots to rent and therefore waste less time in traffic, reduce CO2 emissions and save money. My objective was to prepare a proposition of a mobile application that could automate their tasks.",
       "primaryImage": {
         "url": "/images/projects/parkshare/parkshare-main.png",
-        "alt": ""
+        "alt": "ParkShare - mobile app visualization"
       },
       "images": [
         {
           "url": "/images/projects/parkshare/parkshare-details.png",
-          "alt": ""
+          "alt": "ParkShare - details page"
         },
         {
           "url": "/images/projects/parkshare/parkshare-booking.png",
-          "alt": ""
+          "alt": "ParkShare - booking page"
         },
         {
           "url": "/images/projects/parkshare/parkshare-map.png",
-          "alt": ""
+          "alt": "ParkShare - map"
         }
       ],
       "type": "student",
@@ -88,24 +88,24 @@
       "description": "A study project focused on improving our full stack development skills. My group's concept was to give people an opportunity to share their left over food with others in order to reduce food waste as well as educate them on how to change their habits.",
       "primaryImage": {
         "url": "/images/projects/left-over/leftover-main.png",
-        "alt": ""
+        "alt": "Left Over - mobile device visualization"
       },
       "images": [
         {
           "url": "/images/projects/left-over/leftover-sell.png",
-          "alt": ""
+          "alt": "Left Over - sell page"
         },
         {
           "url": "/images/projects/left-over/leftover-browse.png",
-          "alt": ""
+          "alt": "Left Over - browse page"
         },
         {
           "url": "/images/projects/left-over/leftover-log.png",
-          "alt": ""
+          "alt": "Left Over - login page"
         },
         {
           "url": "/images/projects/left-over/leftover-home1.png",
-          "alt": ""
+          "alt": "Left Over - home page"
         }
       ],
       "stack": ["HTML", "CSS/SASS", "JavaScript", "PHP", "MySQL", "Tailwind"],
