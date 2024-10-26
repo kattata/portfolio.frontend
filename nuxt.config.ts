@@ -35,5 +35,13 @@ export default defineNuxtConfig({
     }
   },
 
-  devtools: { enabled: false }
+  devtools: { enabled: false },
+
+  image: {
+    screens: {
+      projectMain: 400,
+      projectMainMedium: 900,
+      projectGallery: 300
+    }
+  }
 });
