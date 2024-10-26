@@ -63,7 +63,7 @@ useHead({
         <div class="container">
           <div class="section-gallery-images">
             <template v-for="image in item.images" :key="`gallery-image__${image.url}`">
-              <BaseImage width="300" :src="image.url" :alt="image.alt" />
+              <BaseImage width="400" :src="image.url" :alt="image.alt" />
             </template>
           </div>
         </div>

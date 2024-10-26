@@ -41,7 +41,7 @@ export default defineNuxtConfig({
     screens: {
       projectCard: 500,
       projectMain: 900,
-      projectGallery: 300
+      projectGallery: 400
     }
   }
 });
