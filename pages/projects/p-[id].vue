@@ -17,7 +17,7 @@ useHead({
         <div class="container">
           <section class="section-hero">
             <div class="section-hero-column section-hero-column--left">
-              <BaseImage :src="item?.primaryImage.url" :alt="item?.primaryImage.alt" :width="900" fit="cover" />
+              <BaseImage class="section-hero-image" :src="item?.primaryImage.url" :alt="item?.primaryImage.alt" width="900" fit="cover" />
             </div>
             <div class="section-hero-column section-hero-column--right">
               <div class="section-hero-meta">{{ capitalize(item.type) }} project, {{ item.yearCreated }}</div>
@@ -59,7 +59,7 @@ useHead({
         <div class="container">
           <div class="section-gallery-images">
             <template v-for="image in item.images" :key="`gallery-image__${image.url}`">
-              <BaseImage :width="300" :src="image.url" :alt="image.alt" />
+              <BaseImage width="300" :src="image.url" :alt="image.alt" />
             </template>
           </div>
         </div>
@@ -82,11 +82,13 @@ useHead({
   display: grid;
   grid-template-columns: 1fr @(min-width: 900px) 60% 40%;
   gap: 12px @(min-width: 900px) 32px;
+  min-width: 350px;
 
-  img {
+  &-image {
     border: 1px solid var(--color-line);
     width: 100%;
     height: 100%;
+    aspect-ratio: 1/1 @(min-width: 900px) unset;
     object-fit: cover;
     border-radius: var(--border-radius-small);
     box-shadow: var(--shadow-soft);

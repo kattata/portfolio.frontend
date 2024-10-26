@@ -9,8 +9,16 @@ const props = defineProps<{
 const defaultProps: Partial<ImageModifiers> = {
   format: 'webp'
 };
+
+const emit = defineEmits<{
+  load: [void];
+}>();
+
+function handleLoad() {
+  emit('load');
+}
 </script>
 
 <template>
-  <NuxtImg :src="props.src" v-bind="{ ...defaultProps, ...props }" />
+  <NuxtImg :src="props.src" v-bind="{ ...defaultProps, ...props }" @load="handleLoad" />
 </template>
