@@ -2,7 +2,13 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-10-26',
 
-  devtools: { enabled: false },
+  app: {
+    head: {
+      htmlAttrs: {
+        lang: 'en'
+      }
+    }
+  },
 
   css: ['~/assets/css/main.css'],
 
@@ -27,5 +33,7 @@ export default defineNuxtConfig({
     compilerOptions: {
       isCustomElement: (tag: string) => ['swiper-container', 'swiper-slide'].includes(tag)
     }
-  }
+  },
+
+  devtools: { enabled: false }
 });
