@@ -17,7 +17,7 @@ useHead({
         <div class="container">
           <section class="section-hero">
             <div class="section-hero-column section-hero-column--left">
-              <BaseImage :src="item?.primaryImage.url" :alt="item?.primaryImage.alt" width="900" fit="cover" />
+              <BaseImage :src="item?.primaryImage.url" :alt="item?.primaryImage.alt" sizes="400px md:900px" fit="cover" />
             </div>
             <div class="section-hero-column section-hero-column--right">
               <div class="section-hero-meta">{{ capitalize(item.type) }} project, {{ item.yearCreated }}</div>
