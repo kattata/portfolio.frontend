@@ -43,13 +43,13 @@ useHead({
               <div class="section-description-tech">
                 <BaseLabel text="HTML" size="large" />
                 <BaseLabel text="CSS" size="large" />
-                <BaseLabel text="JavaScript" size="large" />
                 <BaseLabel text="TypeScript" size="large" />
-                <BaseLabel text="Git" size="large" />
-                <BaseLabel text="Vue" size="large" />
+                <BaseLabel text="Vue.js" size="large" />
                 <BaseLabel text="Nuxt" size="large" />
                 <BaseLabel text="React" size="large" />
-                <BaseLabel text="Tailwind" size="large" />
+                <BaseLabel text="Next.js" size="large" />
+                <BaseLabel text="TailwindCSS" size="large" />
+                <BaseLabel text="Three.js" size="large" />
               </div>
             </div>
           </div>

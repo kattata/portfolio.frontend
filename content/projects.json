@@ -26,6 +26,34 @@
       "yearCreated": "2024"
     },
     {
+      "title": "GA Finanse",
+      "id": "ga-finanse",
+      "description": "A simple landing page created for a local finance advisory business. A clean slate to work on SEO and implement GA4 tracking. Design and developed for a relative.",
+      "primaryImage": {
+        "url": "/images/projects/ga-finanse/ga-finanse.jpg",
+        "alt": "GA Finanse - main image, visualization"
+      },
+      "images": [
+        {
+          "url": "/images/projects/ga-finanse/ga-finanse-1.jpg",
+          "alt": "GA Finanse - about page"
+        },
+        {
+          "url": "/images/projects/ga-finanse/ga-finanse-2.jpg",
+          "alt": "GA Finanse - services page"
+        }
+      ],
+      "stack": ["TypeScript", "React/Next.js", "Tailwind"],
+      "repo": {
+        "url": "https://github.com/kattata/ga-finanse-v2"
+      },
+      "demo": {
+        "url": "https://ga-finanse.vercel.app/"
+      },
+      "type": "personal",
+      "yearCreated": "2026"
+    },
+    {
       "title": "Sunset Today",
       "id": "sunset-today",
       "description": "Watching a beautiful sunset brings us relief and rest after a long day. I created this web application, which counts down until sunset, to ensure you won't miss it. The idea behind it was to practice working with React, external APIs and dates in JavaScript.",

@@ -3,15 +3,27 @@
     {
       "id": "novicell",
       "title": "Frontend Developer at Novicell",
-      "description": "Building large-scale B2B and B2C e-commerce platforms. Working with Vue, Nuxt, TypeScript, HTML and CSS. Refining and estimating user stories, code reviews, debugging. Collaboration with backend developers, designers and testers. Working in a SCRUM environment.",
-      "keywords": ["Vue/Nuxt", "TypeScript", "SCRUM", "E-commerce", "Full-time job"],
+      "description": "Building large-scale B2B and B2C e-commerce platforms. Working with TypeScript in Vue and React to deliver high-quality frontends. Refining and estimating user stories, code reviews, debugging, mentoring. Collaboration with backend developers, designers, testers and product owners. Working in a SCRUM environment.",
+      "keywords": [
+        "Vue/Nuxt",
+        "React/Next",
+        "Tailwind",
+        "TypeScript",
+        "SCRUM",
+        "E-commerce",
+        "E2E/unit testing",
+        "WCAG",
+        "SEO",
+        "AI tools",
+        "Full-time job"
+      ],
       "dateStarted": "May 2022",
       "dateEnded": null
     },
     {
       "id": "grundfos",
       "title": "UI Developer at Grundfos",
-      "description": "Prototyping app concepts and designing interfaces in Figma. Building a landing page for an internal hackathon in React. Conceptualizing VR training spaces.",
+      "description": "Prototyping app concepts and designing interfaces for water pump technicians in Figma, collaborating with data scientists. Building a landing page for an internal hackathon in React.",
       "keywords": ["React", "Figma", "UX/UI", "Student job"],
       "dateStarted": "May 2021",
       "dateEnded": "May 2022"
@@ -19,7 +31,7 @@
     {
       "id": "parkshare",
       "title": "Frontend Developer & UX/UI Designer at ParkShare",
-      "description": "Building a landing page and a booking system in React. Designing new features in Figma.",
+      "description": "Building UI components and a design system for a parking booking system in React. UX research and designing new features in Figma.",
       "keywords": ["React", "Figma", "UX/UI", "Internship"],
       "dateStarted": "February 2021",
       "dateEnded": "June 2022"

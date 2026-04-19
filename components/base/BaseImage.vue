@@ -4,6 +4,7 @@ import type { ImageModifiers } from '@nuxt/image';
 const props = defineProps<{
   src: string;
   width?: string;
+  loading?: 'lazy' | 'eager';
 }>();
 
 const defaultProps: Partial<ImageModifiers> = {
@@ -20,5 +21,5 @@ function handleLoad() {
 </script>
 
 <template>
-  <NuxtImg :src="props.src" v-bind="{ ...defaultProps, ...props }" @load="handleLoad" />
+  <NuxtImg :src="props.src" v-bind="{ ...defaultProps, ...props }" :loading="props.loading" @load="handleLoad" />
 </template>
