@@ -7,5 +7,3 @@ import data from '~/content/experience.json';
     <ExperiencePreview :experience="item" />
   </template>
 </template>
-
-<style lang="postcss" scoped></style>
