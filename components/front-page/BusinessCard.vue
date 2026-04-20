@@ -10,6 +10,7 @@ interface BusinessCardDimensions {
   height: string;
 }
 const cardDimensions = ref<BusinessCardDimensions | null>(null);
+const { isMobile } = useBreakpoints();
 
 function updateBoxSize() {
   const width = Math.min(window.innerWidth, 600);
@@ -50,11 +51,32 @@ onMounted(() => {
         </div>
       </div>
     </div>
+
+    <div class="business-card-cursor">
+      <div class="business-card-cursor-icon">{{ isMobile() ? '👇' : '👈' }}</div>
+    </div>
   </div>
 </template>
 
 <style lang="postcss" scoped>
+.business-card-cursor {
+  position: absolute;
+  font-weight: bold;
+  font-size: 24px;
+  animation: bounce2 2.8s ease infinite;
+  top: -50px;
+  left: 20px;
+
+  @media (min-width: 900px) {
+    left: unset;
+    right: -50px;
+    top: 28px;
+  }
+}
+
 .business-card {
+  --base-hue: 0;
+
   /* stylelint-disable-next-line value-keyword-case */
   --business-card-height: v-bind(cardDimensions?.height);
   /* stylelint-disable-next-line value-keyword-case */
@@ -62,13 +84,28 @@ onMounted(() => {
 
   height: var(--business-card-height);
   width: var(--business-card-width);
-  transition: all 0.0001s ease-in-out;
   cursor: pointer;
-  animation: bounce 2s ease infinite paused 0.5s;
+  transition: all 0.3s ease-in-out;
+  position: relative;
 
   @media (min-width: 900px) {
     &:hover {
-      animation-play-state: running;
+      .business-card-front {
+        background-image: linear-gradient(rgb(256 256 256 / 90%), rgb(256 256 256 / 90%)),
+          linear-gradient(
+            90deg,
+            hsl(var(--base-hue) 60% 40%),
+            hsl(calc(var(--base-hue) + 60) 60% 40%),
+            hsl(calc(var(--base-hue) + 120) 60% 40%),
+            hsl(calc(var(--base-hue) + 180) 60% 40%),
+            hsl(calc(var(--base-hue) + 240) 60% 40%),
+            hsl(calc(var(--base-hue) + 300) 60% 40%)
+          );
+      }
+
+      .business-card-cursor {
+        animation-play-state: paused;
+      }
     }
   }
 }
@@ -89,6 +126,10 @@ onMounted(() => {
   }
 }
 
+.business-card-back {
+  transform: rotateY(180deg);
+}
+
 .business-card-front,
 .business-card-back {
   /* Flip styles */
@@ -106,12 +147,24 @@ onMounted(() => {
   padding: 24px;
   display: flex;
   align-items: flex-end;
-  border: 1px solid var(--color-line);
   border-radius: var(--border-radius-small);
-}
 
-.business-card-back {
-  transform: rotateY(180deg);
+  /* Animation */
+  border: 2px solid transparent;
+  background-image: linear-gradient(var(--color-white), var(--color-white)),
+    linear-gradient(
+      90deg,
+      hsl(var(--base-hue) 60% 40%),
+      hsl(calc(var(--base-hue) + 60) 60% 40%),
+      hsl(calc(var(--base-hue) + 120) 60% 40%),
+      hsl(calc(var(--base-hue) + 180) 60% 40%),
+      hsl(calc(var(--base-hue) + 240) 60% 40%),
+      hsl(calc(var(--base-hue) + 300) 60% 40%)
+    );
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  animation: hue-rotate 2s linear infinite;
+  transition: all 0.3s ease-in-out;
 }
 
 .business-card-front-footer {
@@ -193,6 +246,43 @@ onMounted(() => {
 
   100% {
     transform: scale(1);
+  }
+}
+
+@keyframes bounce2 {
+  0% {
+    transform: scale(1);
+  }
+
+  35% {
+    transform: scale(1.3);
+  }
+
+  40%,
+  60% {
+    transform: rotate(-3deg) scale(1.3);
+  }
+
+  50% {
+    transform: rotate(3deg) scale(1.3);
+  }
+
+  90% {
+    transform: scale(1.3);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes hue-rotate {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+
+  100% {
+    filter: hue-rotate(360deg);
   }
 }
 </style>

@@ -23,8 +23,8 @@ const props = defineProps<Props>();
         <p>{{ props.experience.description }}</p>
 
         <div class="experience-preview-keywords">
-          <template v-for="item in props.experience.keywords" :key="`keyword__${item}`">
-            <BaseLabel :text="item" size="large" />
+          <template v-for="(item, index) in props.experience.keywords" :key="`keyword__${item}`">
+            <BaseLabel :text="item" size="large" :index="index + 1" />
           </template>
         </div>
       </div>

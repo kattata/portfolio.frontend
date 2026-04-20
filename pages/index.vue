@@ -41,15 +41,15 @@ useHead({
               <h2>tech I like</h2>
 
               <div class="section-description-tech">
-                <BaseLabel text="HTML" size="large" />
-                <BaseLabel text="CSS" size="large" />
-                <BaseLabel text="TypeScript" size="large" />
-                <BaseLabel text="Vue.js" size="large" />
-                <BaseLabel text="Nuxt" size="large" />
-                <BaseLabel text="React" size="large" />
-                <BaseLabel text="Next.js" size="large" />
-                <BaseLabel text="TailwindCSS" size="large" />
-                <BaseLabel text="Three.js" size="large" />
+                <BaseLabel text="HTML" size="large" :index="1" />
+                <BaseLabel text="CSS" size="large" :index="2" />
+                <BaseLabel text="TypeScript" size="large" :index="3" />
+                <BaseLabel text="Vue.js" size="large" :index="4" />
+                <BaseLabel text="Nuxt" size="large" :index="5" />
+                <BaseLabel text="React" size="large" :index="6" />
+                <BaseLabel text="Next.js" size="large" :index="7" />
+                <BaseLabel text="TailwindCSS" size="large" :index="8" />
+                <BaseLabel text="Three.js" size="large" :index="9" />
               </div>
             </div>
           </div>
