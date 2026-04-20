@@ -29,30 +29,29 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="business-card-wrapper">
-    <div class="business-card" @click="handleClick">
-      <div class="business-card-content">
-        <div class="business-card-content-inner" :class="{ 'business-card-content-inner--back-side': !isFrontSide }">
-          <div class="business-card-front">
-            <div class="business-card-front-footer">
-              <div class="h1">Kasia Laniecka</div>
-              <div class="business-card-front-footer-title">Frontend Developer</div>
-            </div>
+  <div class="business-card" @click="handleClick">
+    <div class="business-card-content">
+      <div class="business-card-content-inner" :class="{ 'business-card-content-inner--back-side': !isFrontSide }">
+        <div class="business-card-front">
+          <div class="business-card-front-footer">
+            <div class="h1">Kasia Laniecka</div>
+            <div class="business-card-front-footer-title">Frontend Developer</div>
           </div>
+        </div>
 
-          <div class="business-card-back">
-            <div class="business-card-back-footer">
-              <BaseIcon name="logo" />
-              <div class="business-card-back-footer-details">
-                <div>Kasia Laniecka</div>
-                <div>kasia.laniecka@gmail.com</div>
-                <div>+45 50 34 93 98</div>
-              </div>
+        <div class="business-card-back">
+          <div class="business-card-back-footer">
+            <BaseIcon name="logo" />
+            <div class="business-card-back-footer-details">
+              <div>Kasia Laniecka</div>
+              <div>kasia.laniecka@gmail.com</div>
+              <div>+45 50 34 93 98</div>
             </div>
           </div>
         </div>
       </div>
     </div>
+
     <div class="business-card-cursor">
       <div class="business-card-cursor-icon">{{ isMobile() ? '👇' : '👈' }}</div>
     </div>
@@ -60,9 +59,32 @@ onMounted(() => {
 </template>
 
 <style lang="postcss" scoped>
-.business-card-wrapper {
+.business-card-cursor {
+  position: absolute;
+  font-weight: bold;
+  font-size: 24px;
+  animation: bounce2 2.8s ease infinite;
+  top: -50px;
+  right: 20px;
+
+  @media (min-width: 900px) {
+    right: -50px;
+    top: 28px;
+  }
+}
+
+.business-card {
   --base-hue: 0;
 
+  /* stylelint-disable-next-line value-keyword-case */
+  --business-card-height: v-bind(cardDimensions?.height);
+  /* stylelint-disable-next-line value-keyword-case */
+  --business-card-width: v-bind(cardDimensions?.width);
+
+  height: var(--business-card-height);
+  width: var(--business-card-width);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
   position: relative;
 
   @media (min-width: 900px) {
@@ -85,32 +107,6 @@ onMounted(() => {
       }
     }
   }
-}
-
-.business-card-cursor {
-  position: absolute;
-  font-weight: bold;
-  font-size: 24px;
-  animation: bounce2 2.8s ease infinite;
-  top: -50px;
-  right: 20px;
-
-  @media (min-width: 900px) {
-    right: -50px;
-    top: 28px;
-  }
-}
-
-.business-card {
-  /* stylelint-disable-next-line value-keyword-case */
-  --business-card-height: v-bind(cardDimensions?.height);
-  /* stylelint-disable-next-line value-keyword-case */
-  --business-card-width: v-bind(cardDimensions?.width);
-
-  height: var(--business-card-height);
-  width: var(--business-card-width);
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
 }
 
 .business-card-content {
