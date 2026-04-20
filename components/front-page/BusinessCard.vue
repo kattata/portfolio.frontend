@@ -65,9 +65,10 @@ onMounted(() => {
   font-size: 24px;
   animation: bounce2 2.8s ease infinite;
   top: -50px;
-  right: 20px;
+  left: 20px;
 
   @media (min-width: 900px) {
+    left: unset;
     right: -50px;
     top: 28px;
   }
